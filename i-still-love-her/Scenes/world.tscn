@@ -1,0 +1,112 @@
+[gd_scene load_steps=13 format=3 uid="uid://df12t2ns8g3t"]
+
+[ext_resource type="Texture2D" uid="uid://bsjidg8yl8iip" path="res://Assets/Textures/unnamed.jpg" id="1_cajgf"]
+[ext_resource type="Texture2D" uid="uid://bufpt82aoa188" path="res://Assets/Textures/BrickFloor.jpg" id="3_favrs"]
+[ext_resource type="PackedScene" uid="uid://dqy18kkgelm8v" path="res://ImportedObjects/player.tscn" id="4_cw8sr"]
+[ext_resource type="PackedScene" uid="uid://bm4wn3ad0x10y" path="res://ImportedObjects/syringe.tscn" id="5_1i1ju"]
+[ext_resource type="PackedScene" uid="uid://nr2e8757jpna" path="res://ImportedObjects/Door.tscn" id="5_34pwe"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0ly1j"]
+sky_top_color = Color(0.163791, 0.103618, 0.111319, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 0.344609
+sky_cover_modulate = Color(0.0177324, 0.0177324, 0.0177324, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+ground_curve = 1.28
+
+[sub_resource type="Sky" id="Sky_u6nfc"]
+sky_material = SubResource("ProceduralSkyMaterial_0ly1j")
+
+[sub_resource type="Environment" id="Environment_gymtj"]
+background_mode = 2
+sky = SubResource("Sky_u6nfc")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.437363, 0.302813, 0.208281, 1)
+fog_light_energy = 0.15
+fog_density = 1.0
+fog_sky_affect = 0.275
+fog_height = 20.28
+fog_height_density = -16.0
+fog_depth_curve = 0.450625
+fog_depth_begin = -9.0
+fog_depth_end = 809.5
+volumetric_fog_density = 0.0421
+volumetric_fog_albedo = Color(0.792866, 0.529766, 0.31005, 1)
+volumetric_fog_emission = Color(0.163436, 0.0997671, 0.193719, 1)
+volumetric_fog_emission_energy = 55.4
+volumetric_fog_gi_inject = 0.61
+volumetric_fog_anisotropy = -0.9
+volumetric_fog_length = 1024.0
+volumetric_fog_detail_spread = 1.21838
+volumetric_fog_ambient_inject = 0.84
+volumetric_fog_sky_affect = 0.0
+adjustment_enabled = true
+adjustment_brightness = 0.66
+adjustment_contrast = 1.08
+adjustment_saturation = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgya5"]
+albedo_texture = ExtResource("1_cajgf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sx70j"]
+albedo_texture = ExtResource("3_favrs")
+
+[sub_resource type="MeshTexture" id="MeshTexture_2bwpd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0hss6"]
+albedo_texture = ExtResource("3_favrs")
+roughness_texture = SubResource("MeshTexture_2bwpd")
+roughness_texture_channel = 1
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+visible = false
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gymtj")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2.46164, 2.92018, -8.45811)
+material_override = SubResource("StandardMaterial3D_rgya5")
+use_collision = true
+size = Vector3(4.87109, 0.001, 22)
+
+[node name="StoneFloor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49686, 0.488018, -8.51859)
+material_override = SubResource("StandardMaterial3D_sx70j")
+use_collision = true
+size = Vector3(16, 0.001, 22)
+material = SubResource("StandardMaterial3D_0hss6")
+
+[node name="UselessMass" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26747, 0.677854, -7.84665)
+use_collision = true
+size = Vector3(4.01953, 0.787598, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33317, 1.81274, -8.38027)
+light_color = Color(0.606291, 0.192335, 0, 1)
+light_energy = 0.698
+light_indirect_energy = 1.94
+light_volumetric_fog_energy = 0.62
+light_size = 0.49
+light_specular = 2.055
+
+[node name="Player" parent="." instance=ExtResource("4_cw8sr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27161, 0.488518, -3.21524)
+
+[node name="syringe" parent="." instance=ExtResource("5_1i1ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
+prompt_message = "Pick Up Syringe"
+
+[node name="Door" parent="." instance=ExtResource("5_34pwe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39541, 1.7991, -8.37638)
+
+[connection signal="interacted" from="Door" to="Door" method="_on_interacted"]

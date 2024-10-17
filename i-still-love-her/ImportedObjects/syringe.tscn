@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm4wn3ad0x10y"]
+
+[ext_resource type="Script" path="res://Scripts/Syringe.gd" id="1_wkhxt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hj4rb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bxtxu"]
+
+[node name="syringe" type="RigidBody3D"]
+script = ExtResource("1_wkhxt")
+prompt_message = "Fuck off"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_hj4rb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bxtxu")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

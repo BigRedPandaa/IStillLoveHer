@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://nr2e8757jpna"]
+
+[ext_resource type="Script" path="res://InterationJunk/door.gd" id="1_7ghau"]
+[ext_resource type="Texture2D" uid="uid://d0t0874u5bcou" path="res://Assets/Textures/Door.png" id="1_ijkis"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_au1k3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xvlth"]
+albedo_texture = ExtResource("1_ijkis")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpiqy"]
+size = Vector3(0.125092, 1, 0.530762)
+
+[node name="Door" type="RigidBody3D"]
+script = ExtResource("1_7ghau")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.031079, 0, 0, 0, 2.58198, 0, 0, 0, 1.23314, -0.00186963, 0, -0.00405282)
+mesh = SubResource("BoxMesh_au1k3")
+surface_material_override/0 = SubResource("StandardMaterial3D_xvlth")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+physics_interpolation_mode = 2
+transform = Transform3D(2.56807, 0, 0, 0, 2.56807, 0, 0, 0, 2.56807, 0.00420422, 0, 0.00911355)
+shape = SubResource("BoxShape3D_xpiqy")
