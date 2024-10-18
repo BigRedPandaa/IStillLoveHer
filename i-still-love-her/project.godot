@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="I Still Love Her"
-run/main_scene="res://Scenes/world.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 

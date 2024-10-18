@@ -47,10 +47,13 @@ distance_fade_begin = 206.87
 distance_fade_shadow = 4096.0
 distance_fade_length = 0.0
 
-[node name="CanvasGroup" type="CanvasGroup" parent="Head/Camera3D"]
+[node name="Hands" type="CanvasGroup" parent="Head/Camera3D"]
 
-[node name="HanternV7" type="Sprite2D" parent="Head/Camera3D/CanvasGroup"]
+[node name="HanternV7" type="Sprite2D" parent="Head/Camera3D/Hands"]
 texture_filter = 3
 position = Vector2(108, 276)
 scale = Vector2(3.05527, 3.05527)
 texture = ExtResource("1_pi7mr")
+
+[node name="RightHand" type="Sprite2D" parent="Head/Camera3D/Hands"]
+unique_name_in_owner = true

@@ -1,19 +1,21 @@
+class_name Player
 extends CharacterBody3D
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.01
 
-@export var Holding := HeldItem.NOTHING
 #What the Player is holding
-enum HeldItem {
-	NOTHING,
-	SYRINGE,
-	FAMILYPHOTO,
-	MADDIESLAMB,
-	MADDIESHAMMER,
-	MADDIESKEY,
-}
+@export_enum(
+	"NOTHING", 
+	"SYRINGE", 
+	"FAMILYPHOTO",
+	"MADDIESLAMB",
+	"MADDIESHAMMER",
+	"MADDIESKEY") var Holding: int = 0:
+		set(x):
+			Holding = x
+			_change_display_hand(Holding)
 
 #bobbing Var
 const BOB_Freq = 2.5
@@ -23,6 +25,9 @@ var t_bob = 0.0
 
 @onready var head = $Head
 @onready var cam = $Head/Camera3D
+@onready var hands: CanvasGroup = $Head/Camera3D/Hands
+@onready var right_hand: Sprite2D = %RightHand
+
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -59,6 +64,7 @@ func _physics_process(delta: float) -> void:
 	#head-bobbing
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	cam.transform.origin = _headbob(t_bob)
+	hands.position = _handbob(t_bob)
 
 	move_and_slide()
 
@@ -67,11 +73,27 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_Freq) * BOB_Amp
 	pos.x = cos(time * BOB_Freq/2) * BOB_Amp
 	return pos
-	
 
-func get_helditem(HeldItem):
-	return Holding
+func _handbob(time: float) -> Vector2:
+	var pos: Vector2 = Vector2.ZERO
+	pos.x = (sin(time * BOB_Freq) * BOB_Amp) * 30
+	pos.y = (cos(time * BOB_Freq/2) * BOB_Amp) * 500
+	return pos
 
-func set_heldItem(NewItem):
-	NewItem = HeldItem
-	return HeldItem
+
+func _change_display_hand(hand_type: int) -> void:
+	print(hand_type)
+	match hand_type:
+		0:
+			#right_hand.texture = new_texture
+			pass
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+		4:
+			pass
+		5:
+			pass

@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv7x6lxj4itx0"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_qsory"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3os3p"]
+font_size = 50
+
+[node name="MainMenu" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qsory")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+vertical = true
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "I Still Love Her"
+label_settings = SubResource("LabelSettings_3os3p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+vertical = true
+
+[node name="Start" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start Game"
+
+[node name="Settings" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="Credits" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+
+[node name="Exit" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/BoxContainer/BoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/BoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/BoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/BoxContainer/BoxContainer/Exit" to="." method="_on_exit_pressed"]
