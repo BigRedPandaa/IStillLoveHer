@@ -77,7 +77,7 @@ func _headbob(time) -> Vector3:
 func _handbob(time: float) -> Vector2:
 	var pos: Vector2 = Vector2.ZERO
 	pos.x = (sin(time * BOB_Freq) * BOB_Amp) * 30
-	pos.y = (cos(time * BOB_Freq/2) * BOB_Amp) * 500
+	pos.y = (cos(time * BOB_Freq/2) * BOB_Amp) * 20
 	return pos
 
 
