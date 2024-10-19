@@ -88,6 +88,7 @@ func _change_display_hand(hand_type: int) -> void:
 			#right_hand.texture = new_texture
 			pass
 		1:
+			#right_hand.texture = 
 			pass
 		2:
 			pass

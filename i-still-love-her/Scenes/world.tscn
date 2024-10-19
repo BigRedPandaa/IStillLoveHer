@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=17 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Texture2D" uid="uid://bsjidg8yl8iip" path="res://Assets/Textures/unnamed.jpg" id="1_cajgf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bm4wn3ad0x10y" path="res://ImportedObjects/syringe.tscn" id="5_1i1ju"]
 [ext_resource type="PackedScene" uid="uid://nr2e8757jpna" path="res://ImportedObjects/Door.tscn" id="5_34pwe"]
 [ext_resource type="PackedScene" uid="uid://bqvpproeejs4u" path="res://Scenes/cutscene_manager.tscn" id="6_446tq"]
+[ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book_1.tscn" id="8_icvhi"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l3juq"]
 
@@ -139,6 +140,9 @@ unique_name_in_owner = true
 
 [node name="MaddieTimer" type="Timer" parent="."]
 autostart = true
+
+[node name="Book1" parent="." instance=ExtResource("8_icvhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421384, 1.44738, -10.335)
 
 [connection signal="interacted" from="Door" to="Door" method="_on_interacted"]
 [connection signal="timeout" from="MaddieTimer" to="." method="_on_maddie_timer_timeout"]
