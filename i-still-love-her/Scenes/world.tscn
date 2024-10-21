@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=18 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Texture2D" uid="uid://bsjidg8yl8iip" path="res://Assets/Textures/unnamed.jpg" id="1_cajgf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://nr2e8757jpna" path="res://ImportedObjects/Door.tscn" id="5_34pwe"]
 [ext_resource type="PackedScene" uid="uid://bqvpproeejs4u" path="res://Scenes/cutscene_manager.tscn" id="6_446tq"]
 [ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book_1.tscn" id="8_icvhi"]
+[ext_resource type="AudioStream" uid="uid://ci4rx4y2axuyh" path="res://Assets/Sounds/music'/ISLH_Ambience.mp3" id="9_tsj3l"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l3juq"]
 
@@ -112,6 +113,14 @@ light_specular = 2.055
 [node name="Player" parent="." instance=ExtResource("4_cw8sr")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27161, 0.488518, -3.21524)
+
+[node name="Ambeince" type="AudioStreamPlayer3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27161, -0.488518, -1.14444)
+stream = ExtResource("9_tsj3l")
+volume_db = -22.592
+unit_size = 100.0
+pitch_scale = 0.85
+autoplay = true
 
 [node name="syringe" parent="." instance=ExtResource("5_1i1ju")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
