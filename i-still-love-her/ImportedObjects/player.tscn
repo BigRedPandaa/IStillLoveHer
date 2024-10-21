@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqy18kkgelm8v"]
+[gd_scene load_steps=12 format=3 uid="uid://dqy18kkgelm8v"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gftlv"]
 [ext_resource type="Texture2D" uid="uid://ctrjum24ri7d6" path="res://Assets/Textures/HanternV7.png" id="1_pi7mr"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://bxgl1w6pdqxrf" path="res://Assets/Sounds/FootStepAudio.mp3" id="5_uc21e"]
 [ext_resource type="AudioStream" uid="uid://cenit205ypkov" path="res://Assets/Sounds/Jumpgrunt_edit.mp3" id="6_862ml"]
 [ext_resource type="AudioStream" uid="uid://bmlgeeabssxbh" path="res://Assets/Sounds/landingISLH.mp3" id="7_tis8w"]
+[ext_resource type="AudioStream" uid="uid://b6cnbgg5bh1j7" path="res://Assets/Sounds/Pickup.mp3" id="8_e72cl"]
+[ext_resource type="AudioStream" uid="uid://gni0h4jngi1x" path="res://Assets/Sounds/EmptyHand.mp3" id="9_n5uqc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_km1ah"]
 
@@ -89,3 +91,8 @@ volume_db = -21.074
 pitch_scale = 0.99
 
 [node name="PickupAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_e72cl")
+volume_db = -13.714
+
+[node name="GiveAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_n5uqc")

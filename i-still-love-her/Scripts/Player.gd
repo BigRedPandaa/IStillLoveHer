@@ -27,6 +27,7 @@ var footstep_audio = AudioStreamPlayer
 var jumping_audio = AudioStreamPlayer
 var landing_audio = AudioStreamPlayer
 var pickup_audio = AudioStreamPlayer
+var give_audio = AudioStreamPlayer
 
 @onready var head = $Head
 @onready var cam = $Head/Camera3D
@@ -41,6 +42,7 @@ func _ready() -> void:
 	jumping_audio = $JumpingAudio
 	landing_audio = $LandingAudio
 	pickup_audio = $PickupAudio
+	give_audio = $GiveAudio
 
 func _unhandled_input(event: InputEvent) -> void:
 		if event is InputEventMouseMotion:
@@ -122,20 +124,33 @@ func play_sound_pickup():
 	if not pickup_audio.playing:
 		pickup_audio.play()
 
+func play_sound_give():
+	if not give_audio.playing:
+		give_audio.play()
+
 func _change_display_hand(hand_type: int) -> void:
 	print(hand_type)
 	match hand_type:
 		0:
+			play_sound_give()
 			#right_hand.texture = new_texture
 			pass
 		1:
 			#right_hand.texture = 
+			play_sound_pickup()
 			pass
 		2:
+			play_sound_pickup()
 			pass
 		3:
+			play_sound_pickup()
 			pass
 		4:
+			play_sound_pickup()
 			pass
 		5:
+			play_sound_pickup()
+			pass
+		6:
+			play_sound_pickup()
 			pass
