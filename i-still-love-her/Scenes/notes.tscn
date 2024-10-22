@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbyd0mltsw2km"]
+[gd_scene load_steps=8 format=3 uid="uid://bbfjf4t2g3wo2"]
 
 [ext_resource type="Script" path="res://Scripts/notes.gd" id="1_oveau"]
 [ext_resource type="Texture2D" uid="uid://kyjfn54b524n" path="res://Assets/Textures/NoteSheet.webp" id="2_523r3"]
 [ext_resource type="FontFile" uid="uid://dfto7q4dduw28" path="res://Assets/Fonts/PlaywriteGBS-Italic-VariableFont_wght.ttf" id="3_tpnpj"]
+[ext_resource type="AudioStream" uid="uid://c1d36avjua5um" path="res://Assets/Sounds/NotePickup.mp3" id="4_wqpl8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jjm6q"]
 size = Vector2(0.5, 0.8)
@@ -75,3 +76,6 @@ theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "[wave]Notes Baby!!![wave]"
 scroll_following = true
+
+[node name="NoteSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_wqpl8")
