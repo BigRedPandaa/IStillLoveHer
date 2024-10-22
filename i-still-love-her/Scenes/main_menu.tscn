@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv7x6lxj4itx0"]
+[gd_scene load_steps=7 format=3 uid="uid://bv7x6lxj4itx0"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_qsory"]
 [ext_resource type="Texture2D" uid="uid://redmblun11ud" path="res://Assets/Textures/ISLH.png" id="2_jmhyt"]
@@ -8,6 +8,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_3os3p"]
 font_size = 50
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dw8f1"]
+
 [node name="MainMenu" type="PanelContainer"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,18 +18,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qsory")
 
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_jmhyt")
+metadata/_edit_group_ = true
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 50
-
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(574, 324)
-scale = Vector2(1.82031, 1.83472)
-texture = ExtResource("2_jmhyt")
-metadata/_edit_group_ = true
 
 [node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -51,6 +52,7 @@ vertical = true
 [node name="Start" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dw8f1")
 text = "Start Game"
 icon = ExtResource("3_fmykr")
 flat = true
@@ -59,6 +61,7 @@ icon_alignment = 1
 [node name="Credits" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dw8f1")
 text = "Credits"
 icon = ExtResource("3_fmykr")
 flat = true
@@ -67,12 +70,13 @@ icon_alignment = 1
 [node name="Exit" type="Button" parent="MarginContainer/BoxContainer/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dw8f1")
 text = "Exit"
 icon = ExtResource("3_fmykr")
 flat = true
 icon_alignment = 1
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MarginContainer"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MarginContainer"]
 stream = ExtResource("4_010q0")
 volume_db = -19.81
 pitch_scale = 0.89

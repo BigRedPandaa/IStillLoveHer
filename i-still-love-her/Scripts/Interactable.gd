@@ -1,5 +1,6 @@
-extends CollisionObject3D
 class_name Interactable
+extends CollisionObject3D
+
 
 signal interacted(body)
 @onready var playerInteractable = %Player

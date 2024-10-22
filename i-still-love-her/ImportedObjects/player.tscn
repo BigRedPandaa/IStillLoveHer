@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dqy18kkgelm8v"]
+[gd_scene load_steps=11 format=3 uid="uid://dqy18kkgelm8v"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gftlv"]
 [ext_resource type="Texture2D" uid="uid://ctrjum24ri7d6" path="res://Assets/Textures/HanternV7.png" id="1_pi7mr"]
 [ext_resource type="PackedScene" uid="uid://dqde2adye7n1o" path="res://InterationJunk/interact_ray.tscn" id="2_xp8yv"]
-[ext_resource type="Texture2D" uid="uid://jsoseuwud4qg" path="res://Assets/Textures/HeldItems/Syringe.png" id="4_47kao"]
 [ext_resource type="AudioStream" uid="uid://bxgl1w6pdqxrf" path="res://Assets/Sounds/FootStepAudio.mp3" id="5_uc21e"]
 [ext_resource type="AudioStream" uid="uid://cenit205ypkov" path="res://Assets/Sounds/Jumpgrunt_edit.mp3" id="6_862ml"]
 [ext_resource type="AudioStream" uid="uid://bmlgeeabssxbh" path="res://Assets/Sounds/landingISLH.mp3" id="7_tis8w"]
@@ -65,12 +64,13 @@ texture = ExtResource("1_pi7mr")
 texture_filter = 3
 position = Vector2(971, 350)
 scale = Vector2(2.39784, 2.3462)
-texture = ExtResource("4_47kao")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Head/Camera3D"]
 transform = Transform3D(0.999691, 0, 0.0248684, 0, 1, 0, -0.0248684, 0, 0.999691, 0.0770691, -0.210973, 0.188602)
 
-[node name="FootstepAudio" type="AudioStreamPlayer3D" parent="."]
+[node name="Audio" type="Node3D" parent="."]
+
+[node name="FootstepAudio" type="AudioStreamPlayer3D" parent="Audio"]
 transform = Transform3D(0.999981, -0.00609116, 0, 0.00609116, 0.999981, 0, 0, 0, 1, 0, -0.0975243, -0.163265)
 stream = ExtResource("5_uc21e")
 volume_db = -26.475
@@ -79,20 +79,20 @@ max_db = 4.054
 panning_strength = 9.95
 playback_type = 1
 
-[node name="JumpingAudio" type="AudioStreamPlayer3D" parent="."]
+[node name="JumpingAudio" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("6_862ml")
 volume_db = -0.595
 max_db = -2.21
 panning_strength = 8.55
 
-[node name="LandingAudio" type="AudioStreamPlayer3D" parent="."]
+[node name="LandingAudio" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("7_tis8w")
 volume_db = -21.074
 pitch_scale = 0.99
 
-[node name="PickupAudio" type="AudioStreamPlayer3D" parent="."]
+[node name="PickupAudio" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("8_e72cl")
 volume_db = -13.714
 
-[node name="GiveAudio" type="AudioStreamPlayer3D" parent="."]
+[node name="GiveAudio" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("9_n5uqc")

@@ -5,6 +5,10 @@ extends Interactable
 
 var item_given: int
 
+func _ready() -> void:
+	interacted.connect(_on_interacted)
+
+
 func _on_interacted(body: Player) -> void:
 	# Door stores the item given to Maddie
 	item_given = body.Holding

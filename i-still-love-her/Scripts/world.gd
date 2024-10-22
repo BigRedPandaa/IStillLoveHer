@@ -41,3 +41,11 @@ func _on_maddie_timer_timeout() -> void:
 	# reset timer
 	time_left = time
 	print("Finished wait time")
+
+
+func _on_door_interacted(_body: Variant) -> void:
+	match door.item_given:
+		1:
+			priest += 1
+		_:
+			maddie += 1
