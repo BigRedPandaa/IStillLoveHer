@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dqy18kkgelm8v"]
+[gd_scene load_steps=12 format=3 uid="uid://dqy18kkgelm8v"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_gftlv"]
 [ext_resource type="Texture2D" uid="uid://ctrjum24ri7d6" path="res://Assets/Textures/HanternV7.png" id="1_pi7mr"]
 [ext_resource type="PackedScene" uid="uid://dqde2adye7n1o" path="res://InterationJunk/interact_ray.tscn" id="2_xp8yv"]
+[ext_resource type="Script" path="res://Scripts/hands.gd" id="3_qxu76"]
 [ext_resource type="AudioStream" uid="uid://bxgl1w6pdqxrf" path="res://Assets/Sounds/FootStepAudio.mp3" id="5_uc21e"]
 [ext_resource type="AudioStream" uid="uid://cenit205ypkov" path="res://Assets/Sounds/Jumpgrunt_edit.mp3" id="6_862ml"]
 [ext_resource type="AudioStream" uid="uid://bmlgeeabssxbh" path="res://Assets/Sounds/landingISLH.mp3" id="7_tis8w"]
@@ -18,7 +19,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 script = ExtResource("1_gftlv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101216, 1.48448, 0.26562)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.101216, 1.49274, 0.171817)
 mesh = SubResource("CapsuleMesh_km1ah")
 skeleton = NodePath("")
 
@@ -35,9 +36,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.116818, 0, 0)
 [node name="InteractRay" parent="Head/Camera3D" instance=ExtResource("2_xp8yv")]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.335465, -0.0177038, -0.359283)
-light_color = Color(0.491673, 0.333502, 0.132815, 1)
-light_energy = 2.939
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.335465, -0.0177038, -0.54644)
+light_color = Color(0.580392, 0.305882, 0.027451, 1)
+light_energy = 5.682
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 1.676
 light_size = 0.09
@@ -52,7 +53,12 @@ distance_fade_begin = 206.87
 distance_fade_shadow = 4096.0
 distance_fade_length = 0.0
 
-[node name="Hands" type="CanvasGroup" parent="Head/Camera3D"]
+[node name="AudioListener3D" type="AudioListener3D" parent="Head/Camera3D"]
+transform = Transform3D(0.999691, 0, 0.0248684, 0, 1, 0, -0.0248684, 0, 0.999691, 0.0770691, -0.210973, 0.188602)
+
+[node name="Hands" type="CanvasGroup" parent="Head/Camera3D" node_paths=PackedStringArray("camera")]
+script = ExtResource("3_qxu76")
+camera = NodePath("..")
 
 [node name="LeftHand" type="Sprite2D" parent="Head/Camera3D/Hands"]
 texture_filter = 3
@@ -64,9 +70,6 @@ texture = ExtResource("1_pi7mr")
 texture_filter = 3
 position = Vector2(971, 350)
 scale = Vector2(2.39784, 2.3462)
-
-[node name="AudioListener3D" type="AudioListener3D" parent="Head/Camera3D"]
-transform = Transform3D(0.999691, 0, 0.0248684, 0, 1, 0, -0.0248684, 0, 0.999691, 0.0770691, -0.210973, 0.188602)
 
 [node name="Audio" type="Node3D" parent="."]
 

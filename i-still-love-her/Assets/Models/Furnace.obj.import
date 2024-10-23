@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df3mtexkoggrv"
+path="res://.godot/imported/Furnace.obj-8f67a879c7a6c8661a5c5f9a5108912b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Furnace.obj-8f67a879c7a6c8661a5c5f9a5108912b.mesh"]
+
+source_file="res://Assets/Models/Furnace.obj"
+dest_files=["res://.godot/imported/Furnace.obj-8f67a879c7a6c8661a5c5f9a5108912b.mesh", "res://.godot/imported/Furnace.obj-8f67a879c7a6c8661a5c5f9a5108912b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -20,6 +20,10 @@ config/icon="res://Assets/icon.svg"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 Left={

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=22 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Material" uid="uid://bqtcicoo80scm" path="res://Assets/Materials/Wall.tres" id="2_7wvqw"]
@@ -10,7 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book_1.tscn" id="8_icvhi"]
 [ext_resource type="PackedScene" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
 [ext_resource type="AudioStream" uid="uid://ci4rx4y2axuyh" path="res://Assets/Sounds/music'/ISLH_Ambience.mp3" id="9_tsj3l"]
-[ext_resource type="PackedScene" uid="uid://bbfjf4t2g3wo2" path="res://Scenes/notes.tscn" id="11_le4nv"]
+[ext_resource type="PackedScene" path="res://Scenes/notes.tscn" id="11_le4nv"]
+[ext_resource type="ArrayMesh" uid="uid://df3mtexkoggrv" path="res://Assets/Models/Furnace.obj" id="12_28pbo"]
+[ext_resource type="Texture2D" uid="uid://v4hlw4tp3008" path="res://Assets/Textures/2Dprops/Friepit.png" id="13_5atqt"]
+[ext_resource type="Texture2D" uid="uid://cbosur4whvt7h" path="res://Assets/Textures/2Dprops/Skillet.png" id="14_io47d"]
+[ext_resource type="Texture2D" uid="uid://ll2g6c7p2gdn" path="res://Assets/Textures/2Dprops/ISLH_CoatHanger.png" id="15_tqlpo"]
+[ext_resource type="ArrayMesh" uid="uid://dxurxhbbon4xf" path="res://Assets/Models/WallScone.obj" id="16_jshgn"]
+[ext_resource type="Texture2D" uid="uid://dlt8bfsva3y7u" path="res://Assets/Textures/2Dprops/Candle.png" id="17_aty35"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l3juq"]
 
@@ -73,255 +79,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_gymtj")
 
-[node name="Wall" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00863932, -0.999963, 5.25576e-06, -4.71437e-06, -5.29577e-06, -1, 0.999963, 0.00863932, -4.75893e-06, 2.23553, 2.07604, -3.11613)
-use_collision = true
-size = Vector3(9.05884, 0.001, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall2" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -5.61037, 2.02841, 1.28999)
-use_collision = true
-size = Vector3(16, 0.001, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall4" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -1.10743, 2.03159, -8.15039)
-use_collision = true
-size = Vector3(7, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall6" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.9047, 2.03019, -14.1503)
-use_collision = true
-size = Vector3(11, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall29" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.83543, 6.02634, -19.6502)
-use_collision = true
-size = Vector3(22, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall17" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.84739, 2.19888, -30.1698)
-use_collision = true
-size = Vector3(7, 1, 4.40396)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall34" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.89562, 4.1204, -34.6738)
-use_collision = true
-size = Vector3(2.04395, 1, 0.57312)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall36" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.84736, 4.1204, -25.6738)
-use_collision = true
-size = Vector3(2.04395, 1, 0.57312)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall35" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, 7.44381, 7.74816, -20.1956)
-use_collision = true
-size = Vector3(2.04395, 1, 0.57312)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall20" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.88348, 2.03264, -22.6504)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall18" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.89753, 2.19673, -39.1696)
-use_collision = true
-size = Vector3(7, 0.948242, 4.40527)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall12" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 7.40471, 2.03054, -8.15338)
-use_collision = true
-size = Vector3(10, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall19" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 7.40471, 6.03054, -8.15338)
-use_collision = true
-size = Vector3(12, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall16" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 0.404562, 2.02494, -43.1049)
-use_collision = true
-size = Vector3(26, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall25" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 0.404562, 6.02494, -43.1049)
-use_collision = true
-size = Vector3(26, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall15" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 12.9736, 2.02178, -25.2015)
-use_collision = true
-size = Vector3(35, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall27" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 12.9766, 6.02143, -25.7015)
-use_collision = true
-size = Vector3(34, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall13" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 4.40477, 2.03264, -20.1716)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall31" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 4.40477, 6.03264, -20.1716)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall14" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 10.4492, 2.03264, -20.1716)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall30" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 10.4492, 6.03264, -20.1716)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall8" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55647e-05, -2.13562, 2.03157, -20.1148)
-use_collision = true
-size = Vector3(9.08057, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall21" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55647e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.91123, -2.42912, -21.215)
-use_collision = true
-size = Vector3(18, 1, 4.91992)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall22" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55647e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -7.09148, -2.69903, -20.7756)
-use_collision = true
-size = Vector3(18.2744, 1, 4.45264)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall23" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, -2.4488, -2.78091, -29.9999)
-use_collision = true
-size = Vector3(10, 1, 4.51953)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall24" type="CSGBox3D" parent="."]
-transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, -2.44917, -2.68004, -12.0189)
-use_collision = true
-size = Vector3(10, 1, 4.55457)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall9" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55647e-05, -2.59532, 2.03124, -30.1413)
-use_collision = true
-size = Vector3(8, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall10" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.00606521, -0.999982, -5.55646e-05, -0.000700815, 5.98129e-05, -1, 0.999981, -0.00606515, -0.000701164, -7.10746, 2.03019, -22.1383)
-use_collision = true
-size = Vector3(5, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall11" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.00606521, -0.999982, -5.55646e-05, -0.000700815, 5.98129e-05, -1, 0.999981, -0.00606515, -0.000701164, -7.10443, 2.03054, -28.6382)
-use_collision = true
-size = Vector3(4, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall7" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -13.0225, 2.02178, -26.1501)
-use_collision = true
-size = Vector3(35, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall26" type="CSGBox3D" parent="."]
-transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -12.9589, 6.01469, -36.652)
-use_collision = true
-size = Vector3(14, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall5" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -10.1074, 2.03159, -8.15039)
-use_collision = true
-size = Vector3(7, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall32" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -5.60751, 6.03475, -30.1231)
-use_collision = true
-size = Vector3(14, 1, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="Wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(0.0123615, 0.999923, 0.00123656, 0.0025345, 0.00120534, -0.999996, -0.99992, 0.0123646, -0.00251941, -13.4936, 2.02106, -3.23811)
-use_collision = true
-size = Vector3(9, 0.001, 4)
-material = ExtResource("2_7wvqw")
-
-[node name="StoneFloor" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95145, 0.0061035, -26.5186)
-size = Vector3(10.9092, 1, 36)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor6" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.90604, 0.0061035, -3.51859)
-size = Vector3(17, 1, 10)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00314045, -0.00147514, -31.5186)
-size = Vector3(5, 0.979986, 26)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00314045, -0.011482, -10.5186)
-size = Vector3(5, 1, 4)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.00314, 0.488018, -25.5186)
-size = Vector3(11, 0.001, 36)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.43904, 4.20306, -25.9185)
-size = Vector3(10.1743, 0.420898, 35.0674)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor7" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4738, 4.20306, -14.3848)
-size = Vector3(16, 0.420898, 32)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor8" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5262, 8.20306, -25.3848)
-size = Vector3(12, 0.420898, 36)
-material = ExtResource("3_epals")
-
-[node name="StoneFloor9" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9738, 8.20306, -36.3848)
-size = Vector3(15, 0.420898, 14)
-material = ExtResource("3_epals")
-
 [node name="UselessMass" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26747, 0.677854, 0.5692)
 use_collision = true
@@ -346,13 +103,12 @@ prompt_message = "Pick Up Syringe"
 transform = Transform3D(0.999432, 0, 0.0337134, 0, 0.867407, 0, -0.0337134, 0, 0.999432, 2.22281, 1.54782, -3.34751)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Door"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.869874, 0.0136399, -0.00389004)
-light_color = Color(0.606291, 0.192335, 0, 1)
-light_energy = 0.698
-light_indirect_energy = 1.94
-light_volumetric_fog_energy = 0.62
-light_size = 0.49
-light_specular = 2.055
+transform = Transform3D(1, 0, -3.72529e-09, 0, 1.15286, 0, 3.72529e-09, 0, 1, -0.865343, 0.01364, -0.00629663)
+light_color = Color(0.423529, 0, 0, 1)
+light_energy = 3.548
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
@@ -384,5 +140,664 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421384, 1.44738, -6.64461)
 [node name="Note" parent="." instance=ExtResource("11_le4nv")]
 transform = Transform3D(0.954735, 0, -0.297458, 0, 1, 0, 0.297458, 0, 0.954735, -5.39567, 1.09033, 0.659075)
 note = "[wave]Hello World!!![/wave]"
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00863932, -0.999963, 5.25576e-06, -4.71437e-06, -5.29577e-06, -1, 0.999963, 0.00863932, -4.75893e-06, 2.23553, 2.07604, -3.11613)
+use_collision = true
+size = Vector3(9.05884, 0.001, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall2" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -5.61037, 2.02841, 1.28999)
+use_collision = true
+size = Vector3(16, 0.001, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall4" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -1.10743, 2.03159, -8.15039)
+use_collision = true
+size = Vector3(7, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall6" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.9047, 2.03019, -14.1503)
+use_collision = true
+size = Vector3(11, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall29" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.80618, 5.98181, -23.8041)
+use_collision = true
+size = Vector3(30.305, 0.940308, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall17" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.84739, 2.19888, -30.1698)
+use_collision = true
+size = Vector3(7, 1, 4.40396)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall34" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.89562, 4.1204, -34.6738)
+use_collision = true
+size = Vector3(2.04395, 1, 0.57312)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall36" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.84736, 4.1204, -25.6738)
+use_collision = true
+size = Vector3(2.04395, 1, 0.57312)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall35" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, 7.44381, 7.74816, -20.1956)
+use_collision = true
+size = Vector3(2.04395, 1, 0.57312)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall20" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.82171, 2.03264, -22.6504)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall18" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.89753, 2.19673, -39.1696)
+use_collision = true
+size = Vector3(7, 0.948242, 4.40527)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall12" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 7.40471, 2.03054, -8.15338)
+use_collision = true
+size = Vector3(10, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall19" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 7.40471, 6.03054, -8.15338)
+use_collision = true
+size = Vector3(12, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall16" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 0.404562, 2.02494, -43.1049)
+use_collision = true
+size = Vector3(26, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall25" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 0.404562, 6.02494, -43.1049)
+use_collision = true
+size = Vector3(26, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall15" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 12.9736, 2.02178, -25.2015)
+use_collision = true
+size = Vector3(35, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall27" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 12.9766, 6.02143, -25.7015)
+use_collision = true
+size = Vector3(34, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall13" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 4.40477, 2.03264, -20.1716)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall31" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 4.40477, 6.03264, -20.1716)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall14" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 10.4492, 2.03264, -20.1716)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall30" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606529, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606534, 0.999982, 5.55646e-05, 10.4492, 6.03264, -20.1716)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall8" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55647e-05, -2.13562, 2.03157, -20.1148)
+use_collision = true
+size = Vector3(9.08057, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall21" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55647e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, 1.91123, -2.42912, -21.215)
+use_collision = true
+size = Vector3(18, 1, 4.91992)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall22" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55647e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -7.09148, -2.69903, -20.7756)
+use_collision = true
+size = Vector3(18.2744, 1, 4.45264)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall23" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, -2.4488, -2.78091, -29.9999)
+use_collision = true
+size = Vector3(10, 1, 4.51953)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall24" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.999981, -0.00606519, -0.000701164, -0.000700815, 5.98129e-05, -1, 0.00606525, 0.999982, 5.55647e-05, -2.44917, -2.68004, -12.0189)
+use_collision = true
+size = Vector3(10, 1, 4.55457)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall9" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55647e-05, -2.59532, 2.03124, -30.1413)
+use_collision = true
+size = Vector3(8, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall10" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.00606521, -0.999982, -5.55646e-05, -0.000700815, 5.98129e-05, -1, 0.999981, -0.00606515, -0.000701164, -7.10746, 2.03019, -22.1383)
+use_collision = true
+size = Vector3(5, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall11" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.00606521, -0.999982, -5.55646e-05, -0.000700815, 5.98129e-05, -1, 0.999981, -0.00606515, -0.000701164, -7.10443, 2.03054, -28.6382)
+use_collision = true
+size = Vector3(4, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall7" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -13.0225, 2.02178, -26.1501)
+use_collision = true
+size = Vector3(35, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall26" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.00606529, 0.999982, 5.55646e-05, -0.000700815, 5.98129e-05, -1, -0.999981, 0.00606524, 0.000701164, -12.9589, 6.01469, -36.652)
+use_collision = true
+size = Vector3(14, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall5" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -10.1074, 2.03159, -8.15039)
+use_collision = true
+size = Vector3(7, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall32" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -5.60751, 6.03475, -30.1231)
+use_collision = true
+size = Vector3(14, 1, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Wall3" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(0.0123615, 0.999923, 0.00123656, 0.0025345, 0.00120534, -0.999996, -0.99992, 0.0123646, -0.00251941, -13.4936, 2.02106, -3.23811)
+use_collision = true
+size = Vector3(9, 0.001, 4)
+material = ExtResource("2_7wvqw")
+
+[node name="Floor" type="Node" parent="."]
+
+[node name="StoneFloor" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98083, 0.00610255, -26.5378)
+size = Vector3(10.9092, 1, 36)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor6" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93542, 0.00610255, -3.53774)
+size = Vector3(17, 1, 10)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor4" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0262389, -0.00147609, -31.5378)
+size = Vector3(5, 0.979986, 26)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor5" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0262389, -0.011483, -10.5378)
+size = Vector3(5, 1, 4)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor2" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -25.5378)
+size = Vector3(11, 0.001, 36)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor3" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.40966, 4.20306, -25.9377)
+size = Vector3(10.1743, 0.420898, 35.0674)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor7" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50318, 4.20306, -14.404)
+size = Vector3(16, 0.420898, 32)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor8" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.49682, 8.20306, -25.404)
+size = Vector3(12, 0.420898, 36)
+material = ExtResource("3_epals")
+
+[node name="StoneFloor9" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00318, 8.20306, -36.404)
+size = Vector3(15, 0.420898, 14)
+material = ExtResource("3_epals")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44802, 3.60053, -35.8583)
+light_color = Color(1, 0.413421, 0.165001, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.574136, 0.49139, -0.654907, -0.323932, 0.870939, 0.369503, 0.751955, -1.5565e-08, 0.659215, -7, 5.97365, -33.1001)
+light_color = Color(0.706474, 0.249047, 0, 1)
+light_energy = 6.231
+light_indirect_energy = 2.371
+light_size = 0.286
+spot_range = 28.2776
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.822492, 0, -0.568777, 0, 1, 0, 0.568777, 0, 0.822492, -16.1213, 2.26702, -7.64328)
+light_color = Color(0.682959, 0.220041, 0.137955, 1)
+light_energy = 16.0
+light_indirect_energy = 2.68
+light_size = 1.0
+light_specular = 0.0
+spot_range = 22.2559
+spot_angle = 43.5468
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(0.998353, 1.85958e-09, 0.0573724, -0.0278427, 0.874349, 0.484499, -0.0501635, -0.485298, 0.872909, -0.576103, 3.6907, -8.67875)
+light_color = Color(0.467377, 0.136919, 0.0783988, 1)
+light_energy = 16.0
+light_indirect_energy = 0.0
+light_size = 1.0
+light_specular = 0.0
+spot_range = 9.70168
+spot_angle = 33.1248
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.86564, 2.21244, -3.45174)
+light_color = Color(0.127273, 0.0165782, 0, 1)
+light_energy = 14.323
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 2.29
+light_size = 12.335
+light_specular = 0.0
+omni_range = 14.5265
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72163, 2.56723, -25.5516)
+light_color = Color(0.716556, 0.0930008, 0, 1)
+light_energy = 0.848
+omni_range = 18.426
+
+[node name="Props" type="Node" parent="."]
+
+[node name="Furnace" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.72589, 0.736066, -9.40713)
+mesh = ExtResource("12_28pbo")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Furnace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410048, 0.167232, -0.0263348)
+light_color = Color(1, 0.597778, 0.111319, 1)
+light_energy = 6.029
+light_size = 0.343
+omni_range = 5.73285
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Furnace"]
+transform = Transform3D(0.00902606, 0, -1.00378, 0, 1.35671, 0, 1.72384, 0, 0.00525581, 0.402509, 0.0772424, 0.00502491)
+shaded = true
+texture = ExtResource("13_5atqt")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props/Furnace"]
+physics_interpolation_mode = 2
+transform = Transform3D(0.0782769, 0, -1.01876, 0, 1.08297, 0, 1.351, 0, 0.0590268, -0.0380154, 0.781273, 0.0207286)
+shaded = true
+texture = ExtResource("14_io47d")
+
+[node name="CoatHanger" type="Sprite3D" parent="Props"]
+transform = Transform3D(1.12295, 0, 0.890914, 0, 1.26526, 0, -0.686445, 0, 1.45743, -11.9543, 1.40781, -42.2861)
+gi_mode = 2
+gi_lightmap_scale = 2
+modulate = Color(0.82606, 0.82606, 0.82606, 1)
+pixel_size = 0.011
+shaded = true
+texture = ExtResource("15_tqlpo")
+
+[node name="Scones" type="Node" parent="Props"]
+
+[node name="WallScone" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -8.20456, 2.77403, -24.4935)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone8" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.12941, 0, 0.482963, 0, 0.5, 0, -0.482963, 0, 0.12941, -1.3925, 2.77403, -21.1347)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone8"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone8"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone4" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-2.98023e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.98023e-08, -2.46197, 2.77403, -19.0362)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone4"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone4"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone6" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(7.35137e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 7.35137e-08, -3.94799, 2.77403, -9.25333)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone6"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone6"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone7" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(7.35137e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 7.35137e-08, -6.70119, 2.77403, -9.25333)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone7"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone7"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone5" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-2.98023e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.98023e-08, 0.928781, 2.77403, -19.0362)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone5"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone5"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone2" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -8.20456, 2.77403, -27.2089)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone2"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone18" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, -8.20456, 2.77403, -27.2089)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone18"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone18"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone3" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(6.55671e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 6.55671e-08, -6.88541, 2.77403, -31.2424)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone3"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone3"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone9" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0.800774, 2.77403, -33.5007)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone9"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone9"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone10" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 12.0009, 6.98024, -41.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone10"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone10"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone11" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 12.0009, 6.98024, -41.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone11"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone11"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone12" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 12.0009, 6.98024, -34.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone12"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone12"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone14" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.94815, 6.98024, -34.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone14"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone14"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone16" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.94815, 2.98429, -27.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone16"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone16"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone19" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.96362, 2.98429, -33.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone19"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone19"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone20" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.94815, 2.98429, -35.7369)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone20"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone20"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone17" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.94815, 2.98429, -24.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone17"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone17"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone15" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(0.5, 0, -8.74228e-08, 0, 0.5, 0, 8.74228e-08, 0, 0.5, 2.94815, 6.98024, -28.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone15"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone15"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
+
+[node name="WallScone13" type="MeshInstance3D" parent="Props/Scones"]
+transform = Transform3D(-0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 12.0009, 6.98024, -28.1688)
+mesh = ExtResource("16_jshgn")
+skeleton = NodePath("../..")
+
+[node name="Sprite3D" type="Sprite3D" parent="Props/Scones/WallScone13"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.383024, 0.251076, -0.424999)
+texture = ExtResource("17_aty35")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Scones/WallScone13"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.38578, 0.354951, -0.417973)
+light_color = Color(0.813158, 0.428913, 1.92523e-07, 1)
+light_energy = 0.563
+light_indirect_energy = 0.0
+light_specular = 0.0
 
 [connection signal="interacted" from="Door" to="." method="_on_door_interacted"]
