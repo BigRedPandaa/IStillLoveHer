@@ -66,7 +66,7 @@ position = Vector2(108, 276)
 scale = Vector2(3.05527, 3.05527)
 texture = ExtResource("1_pi7mr")
 
-[node name="RightHand" type="Sprite2D" parent="Head/Camera3D/Hands"]
+[node name="RightHand" type="Sprite2D" parent="Head/Camera3D"]
 texture_filter = 3
 position = Vector2(971, 350)
 scale = Vector2(2.39784, 2.3462)

@@ -16,6 +16,7 @@ albedo_texture = ExtResource("2_523r3")
 size = Vector3(0.534729, 0.0625, 0.802979)
 
 [node name="Note" type="RigidBody3D"]
+process_mode = 3
 script = ExtResource("1_oveau")
 note = "Hello World!!!"
 prompt_message = "Read Note"

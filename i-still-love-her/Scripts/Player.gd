@@ -39,7 +39,7 @@ const SYRINGE = preload("res://Assets/Textures/HeldItems/Syringe.png")
 @onready var head: Node3D = $Head
 @onready var cam: Camera3D = $Head/Camera3D
 @onready var hands: CanvasGroup = $Head/Camera3D/Hands
-@onready var right_hand: Sprite2D = $Head/Camera3D/Hands/RightHand
+@onready var right_hand: Sprite2D = $Head/Camera3D/RightHand
 
 var t_bob = 0.0
 var is_in_air: bool = false

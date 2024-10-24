@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=21 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Material" uid="uid://bqtcicoo80scm" path="res://Assets/Materials/Wall.tres" id="2_7wvqw"]
@@ -8,17 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://nr2e8757jpna" path="res://ImportedObjects/Door.tscn" id="5_34pwe"]
 [ext_resource type="PackedScene" uid="uid://bqvpproeejs4u" path="res://Scenes/cutscene_manager.tscn" id="6_446tq"]
 [ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book_1.tscn" id="8_icvhi"]
-[ext_resource type="PackedScene" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
+[ext_resource type="PackedScene" uid="uid://djlfssecialsk" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
 [ext_resource type="AudioStream" uid="uid://ci4rx4y2axuyh" path="res://Assets/Sounds/music'/ISLH_Ambience.mp3" id="9_tsj3l"]
-[ext_resource type="PackedScene" path="res://Scenes/notes.tscn" id="11_le4nv"]
+[ext_resource type="PackedScene" uid="uid://bbfjf4t2g3wo2" path="res://Scenes/notes.tscn" id="11_le4nv"]
 [ext_resource type="ArrayMesh" uid="uid://df3mtexkoggrv" path="res://Assets/Models/Furnace.obj" id="12_28pbo"]
 [ext_resource type="Texture2D" uid="uid://v4hlw4tp3008" path="res://Assets/Textures/2Dprops/Friepit.png" id="13_5atqt"]
 [ext_resource type="Texture2D" uid="uid://cbosur4whvt7h" path="res://Assets/Textures/2Dprops/Skillet.png" id="14_io47d"]
 [ext_resource type="Texture2D" uid="uid://ll2g6c7p2gdn" path="res://Assets/Textures/2Dprops/ISLH_CoatHanger.png" id="15_tqlpo"]
 [ext_resource type="ArrayMesh" uid="uid://dxurxhbbon4xf" path="res://Assets/Models/WallScone.obj" id="16_jshgn"]
 [ext_resource type="Texture2D" uid="uid://dlt8bfsva3y7u" path="res://Assets/Textures/2Dprops/Candle.png" id="17_aty35"]
-
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_l3juq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0ly1j"]
 sky_top_color = Color(0.163791, 0.103618, 0.111319, 1)
@@ -66,11 +64,6 @@ adjustment_saturation = 0.45
 [node name="World" type="Node3D"]
 script = ExtResource("1_2tgoh")
 
-[node name="WorldFloorCollision" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WorldFloorCollision"]
-shape = SubResource("WorldBoundaryShape3D_l3juq")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 visible = false
@@ -85,9 +78,11 @@ use_collision = true
 size = Vector3(4.01953, 0.787598, 1)
 
 [node name="Player" parent="." instance=ExtResource("4_cw8sr")]
+unique_name_in_owner = true
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.27161, 0.488518, -3.21524)
 
 [node name="Ambeince" type="AudioStreamPlayer3D" parent="Player"]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27161, -0.488518, -1.14444)
 stream = ExtResource("9_tsj3l")
 volume_db = -22.592
@@ -351,46 +346,55 @@ material = ExtResource("2_7wvqw")
 
 [node name="StoneFloor" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98083, 0.00610255, -26.5378)
+use_collision = true
 size = Vector3(10.9092, 1, 36)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor6" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93542, 0.00610255, -3.53774)
+use_collision = true
 size = Vector3(17, 1, 10)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor4" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0262389, -0.00147609, -31.5378)
+use_collision = true
 size = Vector3(5, 0.979986, 26)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor5" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0262389, -0.011483, -10.5378)
+use_collision = true
 size = Vector3(5, 1, 4)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor2" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -25.5378)
+use_collision = true
 size = Vector3(11, 0.001, 36)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor3" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.40966, 4.20306, -25.9377)
+use_collision = true
 size = Vector3(10.1743, 0.420898, 35.0674)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor7" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50318, 4.20306, -14.404)
+use_collision = true
 size = Vector3(16, 0.420898, 32)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor8" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.49682, 8.20306, -25.404)
+use_collision = true
 size = Vector3(12, 0.420898, 36)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor9" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00318, 8.20306, -36.404)
+use_collision = true
 size = Vector3(15, 0.420898, 14)
 material = ExtResource("3_epals")
 
@@ -466,6 +470,7 @@ texture = ExtResource("13_5atqt")
 [node name="Sprite3D2" type="Sprite3D" parent="Props/Furnace"]
 physics_interpolation_mode = 2
 transform = Transform3D(0.0782769, 0, -1.01876, 0, 1.08297, 0, 1.351, 0, 0.0590268, -0.0380154, 0.781273, 0.0207286)
+billboard = 2
 shaded = true
 texture = ExtResource("14_io47d")
 
