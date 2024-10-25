@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=34 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Material" uid="uid://bqtcicoo80scm" path="res://Assets/Materials/Wall.tres" id="2_7wvqw"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://f41xkbcnnmkw" path="res://Assets/Textures/MessyTile.png" id="11_vf5qw"]
 [ext_resource type="ArrayMesh" uid="uid://df3mtexkoggrv" path="res://Assets/Models/Furnace.obj" id="12_28pbo"]
 [ext_resource type="Texture2D" uid="uid://v4hlw4tp3008" path="res://Assets/Textures/2Dprops/Friepit.png" id="13_5atqt"]
+[ext_resource type="Texture2D" uid="uid://twvt6vvemsru" path="res://Assets/Textures/2Dprops/Carpet.png" id="14_f8ccd"]
 [ext_resource type="Texture2D" uid="uid://cbosur4whvt7h" path="res://Assets/Textures/2Dprops/Skillet.png" id="14_io47d"]
 [ext_resource type="Texture2D" uid="uid://ll2g6c7p2gdn" path="res://Assets/Textures/2Dprops/ISLH_CoatHanger.png" id="15_tqlpo"]
 [ext_resource type="ArrayMesh" uid="uid://dxurxhbbon4xf" path="res://Assets/Models/WallScone.obj" id="16_jshgn"]
@@ -115,7 +116,7 @@ Your Love,
 Madeline K. Highgarden"
 
 [node name="Note2" parent="Items" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.992862, 0, -0.11927, 0, 1, 0, 0.11927, 0, 0.992862, -5.26781, 1.22275, 0.398803)
+transform = Transform3D(-0.339148, 0, -0.940733, 0, 1, 0, 0.940733, 0, -0.339148, -12.0746, 1.80745, -3.76474)
 note = "Dear Madeline
 
 You are under strict rule of the church to remain in doors at all cost during night. The church has decided that you will forfeit your freedom each night for the protection of others until a time may come when God cast your demons aside.
@@ -124,7 +125,7 @@ God be with you,
 Father Lucian"
 
 [node name="Note3" parent="Items" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.602985, 0, -0.797752, 0, 1, 0, 0.797752, 0, 0.602985, -8.55062, 0.544095, 0.398803)
+transform = Transform3D(0.602985, 0, -0.797752, 0, 1, 0, 0.797752, 0, 0.602985, -8.55062, 0.544095, -14.0103)
 note = "Dear Thomas
 
 I hope that your sweet Madeline is feeling better. Me and your father had heard she’d been attacked by some mangy street mutt and wanted to send well wishes, we’re truly worried about her. I’ve heard whispers she’s come down with some sort of plague but I assume it’s all hogwash, in the end everything will find it’s place I’m sure of this. Keep your chin high and your spirits higher. And if things get worse remember that the church is alway there to help good people in need.
@@ -148,10 +149,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.09239, 6.3964, -9.648
 visible = false
 
 [node name="SyringeSpawnPos" type="Marker3D" parent="Items"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42286, 1.63714, 0.502896)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4544, 2.21985, -2.94981)
 
 [node name="Candle" parent="Items" instance=ExtResource("7_mnoly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2253, 2.52885, -12.9848)
+transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -12.1289, 2.15526, -4.50286)
 
 [node name="Book2" parent="Items" instance=ExtResource("10_jyrlh")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.8091, 4.9069, -18.6328)
@@ -410,7 +411,7 @@ size = Vector3(11, 0.001, 12.5662)
 material = SubResource("StandardMaterial3D_7rogk")
 
 [node name="StoneFloor10" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -31.8349)
+transform = Transform3D(1, 4.88821e-05, -0.00106333, -5.23238e-05, 0.999995, -0.00323262, 0.00106316, 0.00323267, 0.999994, 7.97376, 0.488017, -31.8349)
 use_collision = true
 size = Vector3(11, 0.001, 23.4058)
 material = ExtResource("3_epals")
@@ -438,6 +439,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.00318, 8.20306, -36.404)
 use_collision = true
 size = Vector3(15, 0.420898, 14)
 material = ExtResource("3_epals")
+
+[node name="Sprite3D" type="Sprite3D" parent="Floor"]
+transform = Transform3D(1.36393, 0, 0, 0, 0.000804962, 1.0001, 0, -1.53749, 0.000523609, 7.3445, 0.517769, -32.5621)
+shaded = true
+texture = ExtResource("14_f8ccd")
 
 [node name="Lighting" type="Node" parent="."]
 
@@ -497,7 +503,28 @@ light_energy = 6.408
 [node name="Props" type="Node" parent="."]
 
 [node name="Table2" parent="Props" instance=ExtResource("2_30swa")]
-transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -10.739, 0.506103, -12.8406)
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -12.0239, 0.506103, -9.32982)
+
+[node name="Table7" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -26.9276)
+
+[node name="Table8" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -28.8172)
+
+[node name="Table9" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -30.726)
+
+[node name="Table10" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -32.6357)
+
+[node name="Table11" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -34.5321)
+
+[node name="Table12" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -36.4738)
+
+[node name="Table6" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(0.697687, 0, -2.84217e-14, 0, 1, 0, -3.55271e-14, 0, 0.646402, -12.82, 0.47248, -4.28721)
 
 [node name="Table5" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -3.26122, 0.506103, -21.3432)
@@ -533,7 +560,7 @@ shaded = true
 texture = ExtResource("14_io47d")
 
 [node name="CoatHanger" type="Sprite3D" parent="Props"]
-transform = Transform3D(1.12295, 0, 0.890914, 0, 1.26526, 0, -0.686445, 0, 1.45743, -11.9543, 1.40781, -42.2861)
+transform = Transform3D(1.12295, 0, 0.890914, 0, 1.26526, 0, -0.686445, 0, 1.45743, -11.9543, 1.40781, -42.2297)
 gi_mode = 2
 gi_lightmap_scale = 2
 modulate = Color(0.82606, 0.82606, 0.82606, 1)
@@ -864,19 +891,257 @@ light_indirect_energy = 0.0
 light_specular = 0.0
 
 [node name="Box" parent="Props" instance=ExtResource("19_7o7h2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.35831, 1.07165, 0.587435)
+transform = Transform3D(0.854839, 0, -0.518893, 0, 1, 0, 0.518893, 0, 0.854839, -12.5431, 1.71914, -3.02716)
 
 [node name="Window" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(-0.0835387, 0, -0.996505, 0, 1, 0, 0.996505, 0, -0.0835387, -5.30566, 1.54471, 1.1719)
+transform = Transform3D(-0.0835387, 0, -0.996505, 0, 1, 0, 0.996505, 0, -0.0835387, -10.846, 1.54471, 1.1719)
 
-[node name="Window2" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5911, 1.54471, -39.408)
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
 
 [node name="Window3" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5329, 1.54471, -32.9779)
+transform = Transform3D(-0.996505, 0, 0.0835387, 0, 1, 0, -0.0835387, 0, -0.996505, -12.4915, 1.54471, -21.8281)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window3"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
 
 [node name="Window4" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5329, 1.54471, -25.9459)
+transform = Transform3D(-0.996505, 0, 0.0835387, 0, 1, 0, -0.0835387, 0, -0.996505, -12.4803, 1.54471, -28.8281)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window4"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window5" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(-0.996505, 0, 0.0835387, 0, 1, 0, -0.0835387, 0, -0.996505, -12.451, 1.54471, -39.2318)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window5"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window6" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -37.9589)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window6"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window7" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -30.9589)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window7"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window8" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -23.9589)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window8"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window9" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -14.9589)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window9"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window10" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -23.9589)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window10"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window11" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -31.0835)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window11"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window12" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -38.2258)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window12"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window13" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(-0.023455, 0, 0.999725, 0, 1, 0, -0.999725, 0, -0.023455, 4.89688, 1.31629, -42.596)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window13"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window14" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.00661487, 0, 0.999979, 0, 1, 0, -0.999979, 0, 0.00661487, 9.89688, 1.31629, -42.596)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window14"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window2" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(-0.0835387, 0, -0.996505, 0, 1, 0, 0.996505, 0, -0.0835387, -0.845972, 1.54471, 1.1719)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window2"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
 
 [node name="Table" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(1.33116, 0, 0, 0, 0.473081, 0, 0, 0, 0.271555, -5.7792, 0.506103, 0.353795)
@@ -921,7 +1186,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.123
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33778, -0.768655, -28.1229)
 
 [node name="Door" parent="Props" instance=ExtResource("26_6hgfj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.76798, 0.488517, -42.3555)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.4965, 0.519975, -37.1207)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.813243, 2.21597, 0.188538)
+light_color = Color(1, 0.529412, 0.443137, 1)
+light_energy = 0.192
 
 [node name="Note" parent="Props" instance=ExtResource("11_le4nv")]
 transform = Transform3D(0.724942, 0, 0.68881, 0, 1, 0, -0.68881, 0, 0.724942, -1.74184, 1.81274, -21.9572)

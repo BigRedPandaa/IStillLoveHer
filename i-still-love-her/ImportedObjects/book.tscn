@@ -13,4 +13,5 @@ shape = SubResource("BoxShape3D_bxtxu")
 
 [node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
 billboard = 1
+shaded = true
 texture = ExtResource("2_k1o48")
