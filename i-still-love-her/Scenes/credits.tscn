@@ -41,9 +41,17 @@ label_settings = SubResource("LabelSettings_j2eyk")
 
 [node name="Label" type="Label" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
-text = "Game by: Jayden and KC
+text = "Game by:
+ Jayden WIsniewski
+ and 
+Kenechukwu Ozoemene
 
-Thank you for playing our game"
+Voices:
+Thomas: Jayden Wisniewski
+Maddie: Kayla Staples
+Priest Jacobie: Jonah Gobson
+
+Thank you for playing our game!"
 horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
