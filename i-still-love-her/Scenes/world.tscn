@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=53 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Material" uid="uid://bqtcicoo80scm" path="res://Assets/Materials/Wall.tres" id="2_7wvqw"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bqvpproeejs4u" path="res://Scenes/cutscene_manager.tscn" id="6_446tq"]
 [ext_resource type="PackedScene" uid="uid://b16gqirq5hxue" path="res://ImportedObjects/Candle.tscn" id="7_mnoly"]
 [ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book.tscn" id="8_icvhi"]
-[ext_resource type="PackedScene" uid="uid://djlfssecialsk" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
+[ext_resource type="PackedScene" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
 [ext_resource type="PackedScene" uid="uid://po76gtlg002g" path="res://Assets/Models/Bookshelf.blend" id="9_no30s"]
 [ext_resource type="PackedScene" uid="uid://bhh7ts8bacggu" path="res://ImportedObjects/Meat.tscn" id="9_okdy8"]
 [ext_resource type="AudioStream" uid="uid://ci4rx4y2axuyh" path="res://Assets/Sounds/music'/ISLH_Ambience.mp3" id="9_tsj3l"]
@@ -22,13 +22,30 @@
 [ext_resource type="Texture2D" uid="uid://twvt6vvemsru" path="res://Assets/Textures/2Dprops/Carpet.png" id="14_f8ccd"]
 [ext_resource type="Texture2D" uid="uid://cbosur4whvt7h" path="res://Assets/Textures/2Dprops/Skillet.png" id="14_io47d"]
 [ext_resource type="Texture2D" uid="uid://ll2g6c7p2gdn" path="res://Assets/Textures/2Dprops/ISLH_CoatHanger.png" id="15_tqlpo"]
+[ext_resource type="Texture2D" uid="uid://u7x53y48bhxl" path="res://Assets/Textures/2Dprops/Candle Stand.png" id="16_44lgj"]
 [ext_resource type="ArrayMesh" uid="uid://dxurxhbbon4xf" path="res://Assets/Models/WallScone.obj" id="16_jshgn"]
 [ext_resource type="Texture2D" uid="uid://dlt8bfsva3y7u" path="res://Assets/Textures/2Dprops/Candle.png" id="17_aty35"]
+[ext_resource type="Texture2D" uid="uid://kyjfn54b524n" path="res://Assets/Textures/NoteSheet.webp" id="17_x6hj1"]
+[ext_resource type="Texture2D" uid="uid://54t75fbc6s06" path="res://Assets/Textures/2Dprops/ScatterPaper.png" id="18_ctbhi"]
 [ext_resource type="PackedScene" uid="uid://cn7rebo66kod4" path="res://ImportedObjects/window.tscn" id="18_qhq5a"]
 [ext_resource type="PackedScene" uid="uid://qjktldr3nig8" path="res://ImportedObjects/box.tscn" id="19_7o7h2"]
+[ext_resource type="Texture2D" uid="uid://cv2euf5fdxr13" path="res://Assets/Textures/InkWell.png" id="19_q587o"]
 [ext_resource type="PackedScene" uid="uid://bjlypnomtiser" path="res://Assets/Models/Shelf.blend" id="22_m1t42"]
+[ext_resource type="AudioStream" uid="uid://beyqg0374xwdu" path="res://Assets/Sounds/fire-place-189399.mp3" id="23_y6wwk"]
 [ext_resource type="PackedScene" uid="uid://bu4x0uryvyf2i" path="res://ImportedObjects/stairs.tscn" id="24_c34la"]
 [ext_resource type="PackedScene" uid="uid://c5til5dwfesyr" path="res://ImportedObjects/exitDoor.tscn" id="26_6hgfj"]
+[ext_resource type="Texture2D" uid="uid://btd5pdb7vipx8" path="res://Assets/Textures/2Dprops/TableCloth.png" id="28_sbcct"]
+[ext_resource type="Texture2D" uid="uid://b5wvqltyib8ow" path="res://Assets/Textures/2Dprops/Chandelier.png" id="29_kmrse"]
+[ext_resource type="Texture2D" uid="uid://b5sceuueek72s" path="res://Assets/Textures/2Dprops/Books.png" id="30_nwtlw"]
+[ext_resource type="PackedScene" uid="uid://qt5vuxe6mcs" path="res://Assets/Models/Chair.glb" id="30_wejwc"]
+[ext_resource type="Texture2D" uid="uid://i7r2vt1hkaa6" path="res://Assets/Textures/2Dprops/FlowerPot.png" id="31_342m2"]
+[ext_resource type="Texture2D" uid="uid://hw8m4dq7o35w" path="res://Assets/Textures/2Dprops/PotHook.png" id="32_147ev"]
+[ext_resource type="PackedScene" uid="uid://cm3x0t752d6m3" path="res://Assets/Models/ComfyCouch.glb" id="38_66jh7"]
+[ext_resource type="PackedScene" uid="uid://cmdhh7qxnqrwc" path="res://Assets/Models/ComfyChair.glb" id="39_yhn6p"]
+[ext_resource type="Texture2D" uid="uid://q3w5j83l736r" path="res://Assets/Textures/2Dprops/Carpet2.png" id="40_e8q6k"]
+[ext_resource type="Texture2D" uid="uid://70hs5qdhkspq" path="res://Assets/Textures/2Dprops/Boxes.png" id="41_g4swr"]
+[ext_resource type="Texture2D" uid="uid://br1r1pw7tcaq4" path="res://Assets/Textures/2Dprops/Cross.png" id="42_cp7tk"]
+[ext_resource type="Texture2D" uid="uid://cxr7gf2ugqsbh" path="res://Assets/Textures/2Dprops/Bucket.png" id="44_344mi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0ly1j"]
 sky_top_color = Color(0.163791, 0.103618, 0.111319, 1)
@@ -77,6 +94,12 @@ adjustment_saturation = 0.45
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rogk"]
 albedo_texture = ExtResource("11_vf5qw")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ad5yk"]
+albedo_texture = ExtResource("11_vf5qw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcn2n"]
+albedo_texture = ExtResource("17_x6hj1")
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_2tgoh")
 
@@ -90,7 +113,7 @@ environment = SubResource("Environment_gymtj")
 
 [node name="Player" parent="." instance=ExtResource("4_cw8sr")]
 unique_name_in_owner = true
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.27161, -0.187405, -3.21524)
+transform = Transform3D(1.29717, 0, -0.0856577, 0, 1.3, 0, 0.0856577, 0, 1.29717, -9.98934, -0.0830048, -1.01356)
 
 [node name="Ambeince" type="AudioStreamPlayer3D" parent="Player"]
 process_mode = 3
@@ -107,7 +130,7 @@ autostart = true
 [node name="Items" type="Node" parent="."]
 
 [node name="Note" parent="Items" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.776992, 0, 0.629511, 0, 1, 0, -0.629511, 0, 0.776992, -3.83491, 1.22275, 0.659075)
+transform = Transform3D(-0.776992, 0, -0.629511, 0, 1, 0, 0.629511, 0, -0.776992, -6.67726, 1.22275, -1.62158)
 note = "Dearest Tom,
 
 I appreciate all the letters I have been receiving from you, but please know that you have stepped one foot into your grave. You may say that the church will help but I assure you I can not be saved. I love you and I fear what I am, I do not want to hurt anyone else but I know I will. Please protect yourself and stay away from me, you do not deserve my burdens.
@@ -116,7 +139,7 @@ Your Love,
 Madeline K. Highgarden"
 
 [node name="Note2" parent="Items" instance=ExtResource("11_le4nv")]
-transform = Transform3D(-0.339148, 0, -0.940733, 0, 1, 0, 0.940733, 0, -0.339148, -12.0746, 1.80745, -3.76474)
+transform = Transform3D(-0.961951, 0, 0.27322, 0, 1, 0, -0.27322, 0, -0.961951, -1.46428, 1.80745, -22.1148)
 note = "Dear Madeline
 
 You are under strict rule of the church to remain in doors at all cost during night. The church has decided that you will forfeit your freedom each night for the protection of others until a time may come when God cast your demons aside.
@@ -125,7 +148,7 @@ God be with you,
 Father Lucian"
 
 [node name="Note3" parent="Items" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.602985, 0, -0.797752, 0, 1, 0, 0.797752, 0, 0.602985, -8.55062, 0.544095, -14.0103)
+transform = Transform3D(0.602985, 0, -0.797752, 0, 1, 0, 0.797752, 0, 0.602985, 8.25776, 1.81661, -26.7435)
 note = "Dear Thomas
 
 I hope that your sweet Madeline is feeling better. Me and your father had heard she’d been attacked by some mangy street mutt and wanted to send well wishes, we’re truly worried about her. I’ve heard whispers she’s come down with some sort of plague but I assume it’s all hogwash, in the end everything will find it’s place I’m sure of this. Keep your chin high and your spirits higher. And if things get worse remember that the church is alway there to help good people in need.
@@ -152,15 +175,30 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4544, 2.21985, -2.94981)
 
 [node name="Candle" parent="Items" instance=ExtResource("7_mnoly")]
-transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -12.1289, 2.15526, -4.50286)
+transform = Transform3D(0.555, 0, 0, 0, 0.555, 0, 0, 0, 0.555, 11.6151, 5.91577, -35.2034)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Items/Candle"]
+transform = Transform3D(2.04082, 0, 0, 0, 2.04082, 0, 0, 0, 2.04082, 0, 0.935474, 0)
+light_color = Color(0.712316, 0.214732, 0.341403, 1)
+light_energy = 0.105
 
 [node name="Book2" parent="Items" instance=ExtResource("10_jyrlh")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.8091, 4.9069, -18.6328)
+transform = Transform3D(0.345088, 0, 0, 0, 0.350963, 0, 0, 0, 0.5, 3.50172, 6.37301, -18.8842)
 visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Items/Book2"]
+transform = Transform3D(2.89781, 0, 0, 0, 2.8493, 0, 0, 0, 2, 0, 0.935474, 0.476467)
+light_color = Color(0.712316, 0.214732, 0.341403, 1)
+light_energy = 0.105
 
 [node name="Meat" parent="Items" instance=ExtResource("9_okdy8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6235, 2.86128, -14.4374)
 visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Items/Meat"]
+transform = Transform3D(2.04082, 0, 0, 0, 2.04082, 0, 0, 0, 2.04082, 0, 0.935474, 0)
+light_color = Color(0.712316, 0.214732, 0.341403, 1)
+light_energy = 0.105
 
 [node name="Key" parent="Items" instance=ExtResource("10_ogspy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.941802, -4.21616, -28.4196)
@@ -412,6 +450,7 @@ material = SubResource("StandardMaterial3D_7rogk")
 
 [node name="StoneFloor10" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 4.88821e-05, -0.00106333, -5.23238e-05, 0.999995, -0.00323262, 0.00106316, 0.00323267, 0.999994, 7.97376, 0.488017, -31.8349)
+material_override = SubResource("StandardMaterial3D_ad5yk")
 use_collision = true
 size = Vector3(11, 0.001, 23.4058)
 material = ExtResource("3_epals")
@@ -440,8 +479,8 @@ use_collision = true
 size = Vector3(15, 0.420898, 14)
 material = ExtResource("3_epals")
 
-[node name="Sprite3D" type="Sprite3D" parent="Floor"]
-transform = Transform3D(1.36393, 0, 0, 0, 0.000804962, 1.0001, 0, -1.53749, 0.000523609, 7.3445, 0.517769, -32.5621)
+[node name="Carpet" type="Sprite3D" parent="Floor"]
+transform = Transform3D(1.36393, 0, 0, 0, 0.000751918, 1.00005, 0, -1.43618, 0.000523582, 7.3445, 0.517769, -30.93)
 shaded = true
 texture = ExtResource("14_f8ccd")
 
@@ -503,6 +542,12 @@ light_energy = 6.408
 [node name="Props" type="Node" parent="."]
 
 [node name="Table2" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(0.443, 0, 3.28952e-14, 0, 0.92, 0, -2.25581e-14, 0, 0.646, 11.7131, 4.55788, -28.2107)
+
+[node name="Table13" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(0.443, 0, 3.28952e-14, 0, 0.92, 0, -2.25581e-14, 0, 0.646, 0.586941, 0.715744, -32.8535)
+
+[node name="Table12" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -12.0239, 0.506103, -9.32982)
 
 [node name="Table7" parent="Props" instance=ExtResource("2_30swa")]
@@ -520,20 +565,83 @@ transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.825
 [node name="Table11" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -34.5321)
 
-[node name="Table12" parent="Props" instance=ExtResource("2_30swa")]
-transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 6.58646, 0.506103, -36.4738)
-
 [node name="Table6" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(0.697687, 0, -2.84217e-14, 0, 1, 0, -3.55271e-14, 0, 0.646402, -12.82, 0.47248, -4.28721)
 
 [node name="Table5" parent="Props" instance=ExtResource("2_30swa")]
-transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -3.26122, 0.506103, -21.3432)
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -3.3869, 0.506103, -21.3432)
 
 [node name="Table3" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 7.43099, 4.32005, -9.4511)
 
+[node name="Sprite3D" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, 0, 0, 1, -0.625262, 1.60239, -0.376998)
+billboard = 2
+texture = ExtResource("16_44lgj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Table3/Sprite3D"]
+transform = Transform3D(1.43331, 0, 1.06581e-13, 0, 1, 0, 7.10543e-15, 0, 1.54702, 0, 0.238576, 0)
+light_color = Color(0.66803, 0.453526, 0, 1)
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, 0, 0, 1, -0.625264, 1.60239, 3.05288)
+billboard = 2
+texture = ExtResource("16_44lgj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Table3/Sprite3D2"]
+transform = Transform3D(1.43331, 0, 1.06581e-13, 0, 1, 0, 7.10543e-15, 0, 1.54702, 0, 0.238576, 0)
+light_color = Color(0.66803, 0.453526, 0, 1)
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, 0, 0, 1, 24.2198, 1.73373, 7.25406)
+billboard = 2
+texture = ExtResource("16_44lgj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Table3/Sprite3D3"]
+transform = Transform3D(1.43331, 0, 1.06581e-13, 0, 1, 0, 7.10543e-15, 0, 1.54702, 0, 0.238576, 0)
+light_color = Color(0.66803, 0.453526, 0, 1)
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, 0, 0, 1, 37.7138, 1.73373, 7.53365)
+billboard = 2
+texture = ExtResource("16_44lgj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Table3/Sprite3D4"]
+transform = Transform3D(1.43331, 0, 1.06581e-13, 0, 1, 0, 7.10543e-15, 0, 1.54702, 0, 0.238576, 0)
+light_color = Color(0.66803, 0.453526, 0, 1)
+
+[node name="Sprite3D5" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1.04194, -0.637306, 1.71714e-08, -4.6703e-08, 6.64785e-08, 0.369514, -0.494216, -1.34362, 1.28312e-09, 0.212312, 1.31035, 2.61906)
+material_override = SubResource("StandardMaterial3D_vcn2n")
+modulate = Color(0.625597, 0.625597, 0.625597, 1)
+texture = ExtResource("18_ctbhi")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(0.870511, 0.975369, 5.70922e-09, -4.6703e-08, 6.64785e-08, 0.369514, 0.756377, -1.12255, 1.62452e-08, 0.603021, 1.31035, 2.18404)
+material_override = SubResource("StandardMaterial3D_vcn2n")
+modulate = Color(0.454524, 0.454524, 0.454524, 1)
+texture = ExtResource("18_ctbhi")
+
+[node name="Sprite3D7" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(0.87051, 0.975369, 5.70922e-09, -4.6703e-08, 6.64785e-08, 0.369514, 0.756377, -1.12255, 1.62452e-08, 0.931553, 1.31035, 2.64946)
+material_override = SubResource("StandardMaterial3D_vcn2n")
+modulate = Color(0.454524, 0.454524, 0.454524, 1)
+texture = ExtResource("18_ctbhi")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Props/Table3"]
+transform = Transform3D(1, 0, 2.13163e-14, 0, 1, 0, 0, 0, 1, 1.21733, 1.47187, -0.628823)
+billboard = 2
+shaded = true
+texture = ExtResource("19_q587o")
+
 [node name="Table4" parent="Props" instance=ExtResource("2_30swa")]
 transform = Transform3D(-0.697687, 0, -5.65103e-08, 0, 1, 0, 6.09937e-08, 0, -0.646402, 11.6896, 0.506103, -13.4226)
+
+[node name="Table15" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-0.697687, 0, -5.65103e-08, 0, 1, 0, 6.09937e-08, 0, -0.646402, 3.51387, 0.506103, -11.1611)
+
+[node name="Table16" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-0.697687, 0, -5.65103e-08, 0, 1, 0, 6.09937e-08, 0, -0.646402, 3.51387, 0.506103, -15.4538)
 
 [node name="Furnace" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.72589, 0.736066, -9.40713)
@@ -558,6 +666,19 @@ transform = Transform3D(0.0782769, 0, -1.01876, 0, 1.08297, 0, 1.351, 0, 0.05902
 billboard = 2
 shaded = true
 texture = ExtResource("14_io47d")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Props/Furnace"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12722, 0.0274954, 0.0046196)
+stream = ExtResource("23_y6wwk")
+volume_db = -0.976
+unit_size = 29.45
+pitch_scale = 1.32
+autoplay = true
+max_distance = 4.7
+panning_strength = 3.0
+emission_angle_enabled = true
+emission_angle_degrees = 89.0
+emission_angle_filter_attenuation_db = 0.0
 
 [node name="CoatHanger" type="Sprite3D" parent="Props"]
 transform = Transform3D(1.12295, 0, 0.890914, 0, 1.26526, 0, -0.686445, 0, 1.45743, -11.9543, 1.40781, -42.2297)
@@ -939,7 +1060,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Window5" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(-0.996505, 0, 0.0835387, 0, 1, 0, -0.0835387, 0, -0.996505, -12.451, 1.54471, -39.2318)
+transform = Transform3D(0.0325796, 0, -0.99947, 0, 1, 0, 0.99947, 0, 0.0325796, -3.05949, 5.0384, -30.5714)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -957,8 +1078,46 @@ light_size = 0.071
 spot_range = 8.39057
 spot_angle = 37.7666
 
+[node name="Window16" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.0112223, 0, -0.999938, 0, 1, 0, 0.999938, 0, 0.0112223, -8.7263, 5.0384, -30.644)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window16"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
+[node name="Window15" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(-0.996505, 0, 0.0835387, 0, 1, 0, -0.0835387, 0, -0.996505, -12.451, 1.54471, -39.2318)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window15"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
 [node name="Window6" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -37.9589)
+transform = Transform3D(0.999955, 0, -0.00952941, 0, 1, 0, 0.00952941, 0, 0.999955, 12.5193, 5.23307, -37.9589)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -977,7 +1136,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Window7" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -30.9589)
+transform = Transform3D(0.999904, 0, 0.0138923, 0, 1, 0, -0.0138923, 0, 0.999904, 12.5117, 5.23307, -30.9589)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -996,7 +1155,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Window8" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 5.23307, -23.9589)
+transform = Transform3D(0.998851, 0, -0.0479433, 0, 1, 0, 0.0479433, 0, 0.998851, 12.5029, 5.23307, -23.9589)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -1033,8 +1192,27 @@ light_size = 0.071
 spot_range = 8.39057
 spot_angle = 37.7666
 
+[node name="Window17" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(0.00551516, 0, -0.999985, 0, 1, 0, 0.999985, 0, 0.00551516, 4.12852, 5.23307, -8.64567)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Window17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Props/Window17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
+light_color = Color(2.88785e-06, 0.420349, 0.601292, 1)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Props/Window17"]
+transform = Transform3D(-0.20625, -0.119285, 0.971201, -0.0149261, 0.99281, 0.118769, -0.978385, 0.0099999, -0.206547, 1.63344, 1.10904, -0.136934)
+light_color = Color(0, 0.710993, 0.711108, 1)
+light_energy = 1.105
+light_size = 0.071
+spot_range = 8.39057
+spot_angle = 37.7666
+
 [node name="Window10" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -23.9589)
+transform = Transform3D(0.998484, 0, -0.0550548, 0, 1, 0, 0.0550548, 0, 0.998484, 12.456, 1.31993, -23.9013)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -1053,7 +1231,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Window11" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -31.0835)
+transform = Transform3D(0.999729, 0, 0.0233154, 0, 1, 0, -0.0233154, 0, 0.999729, 12.4744, 1.31629, -31.0835)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -1072,7 +1250,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Window12" parent="Props" instance=ExtResource("18_qhq5a")]
-transform = Transform3D(0.996505, 0, -0.0835388, 0, 1, 0, 0.0835388, 0, 0.996505, 12.3341, 1.31629, -38.2258)
+transform = Transform3D(0.999729, 0, 0.0233154, 0, 1, 0, -0.0233154, 0, 0.999729, 12.4804, 1.33581, -38.2263)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Props/Window12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399722, 1.21292, -0.0183849)
@@ -1144,7 +1322,7 @@ spot_range = 8.39057
 spot_angle = 37.7666
 
 [node name="Table" parent="Props" instance=ExtResource("2_30swa")]
-transform = Transform3D(1.33116, 0, 0, 0, 0.473081, 0, 0, 0, 0.271555, -5.7792, 0.506103, 0.353795)
+transform = Transform3D(-1.33116, 0, 2.37401e-08, 0, 0.473081, 0, -1.16374e-07, 0, -0.271555, -4.73297, 0.506103, -1.3163)
 
 [node name="Shelf" parent="Props" instance=ExtResource("22_m1t42")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.48538, 2.49901, -11.2399)
@@ -1153,7 +1331,362 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.48538, 2.49901, -11.2
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.48538, 2.49901, -15.6072)
 
 [node name="Bookshelf" parent="Props" instance=ExtResource("9_no30s")]
-transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 3.66573, 4.82346, -19.1677)
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 3.90267, 4.82346, -19.1677)
+
+[node name="Books2" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books3" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books4" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -0.679181)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books5" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, 0.0643983)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books6" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, 0.0643973)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books7" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books8" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books9" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -0.456503)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books10" type="Sprite3D" parent="Props/Bookshelf"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, 0.0663595)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Bookshelf2" parent="Props" instance=ExtResource("9_no30s")]
+transform = Transform3D(0.5, 0, -5.32907e-15, 0, 0.5, 0, 5.32907e-15, 0, 0.5, 2.71485, 4.82346, -17.4325)
+
+[node name="Books2" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books11" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, 0.0941486)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books3" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books4" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -0.679181)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books5" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, 0.0643983)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books6" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, 0.0643973)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books7" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books8" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books9" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -0.456503)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books10" type="Sprite3D" parent="Props/Bookshelf2"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, 0.0663595)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Bookshelf3" parent="Props" instance=ExtResource("9_no30s")]
+transform = Transform3D(0.5, 0, -5.32907e-15, 0, 0.5, 0, 5.32907e-15, 0, 0.5, 2.71485, 4.82346, -15.4379)
+
+[node name="Books2" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books11" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, 0.0941486)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books3" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books4" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -0.679181)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books5" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, 0.0643983)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books6" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, 0.0643973)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books7" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books8" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books9" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -0.456503)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books10" type="Sprite3D" parent="Props/Bookshelf3"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, 0.0663595)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Bookshelf4" parent="Props" instance=ExtResource("9_no30s")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 11.8615, 4.82346, -10.5806)
+
+[node name="Books2" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books11" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, 0.0941486)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books3" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books4" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -0.679181)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books5" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, 0.0643983)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books6" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, 0.0643973)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books7" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books8" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books9" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -0.456503)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books10" type="Sprite3D" parent="Props/Bookshelf4"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, 0.0663595)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Bookshelf5" parent="Props" instance=ExtResource("9_no30s")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 11.8615, 4.82346, -12.5806)
+
+[node name="Books2" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books11" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 3.01109, 0.0941486)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books3" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -1.41845)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books4" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, -0.679181)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books5" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 4.82638, 0.0643983)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books6" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, 0.0643973)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books7" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, 1.36817, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books8" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -1.34214)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books9" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, -0.456503)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
+
+[node name="Books10" type="Sprite3D" parent="Props/Bookshelf5"]
+transform = Transform3D(-4.79116e-08, 0, -1, 0, 1.53394, 0, 1.09609, 0, -4.37114e-08, 0.633766, -0.218821, 0.0663595)
+modulate = Color(1, 0.312036, 0.0437402, 1)
+pixel_size = 0.0145
+shaded = true
+texture = ExtResource("30_nwtlw")
 
 [node name="Stairs" parent="Props" instance=ExtResource("24_c34la")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.942261, 2.67732, -41.1449)
@@ -1194,7 +1727,7 @@ light_color = Color(1, 0.529412, 0.443137, 1)
 light_energy = 0.192
 
 [node name="Note" parent="Props" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.724942, 0, 0.68881, 0, 1, 0, -0.68881, 0, 0.724942, -1.74184, 1.81274, -21.9572)
+transform = Transform3D(0.934372, 0, -0.356298, 0, 1, 0, 0.356298, 0, 0.934372, 9.00527, 5.68901, -9.94702)
 note = "To Whom It May Concern,
 
 If my life may come to an unceremonious and untimely end I pray you will take duty over protecting my Madeline. Each day she needs a good book, and her favourite tea is Earl Grey. You needn’t feed her all too much as she chooses to drink a feast worth of food each day anyway. But most importantly, each night take the key from the basement and lock her away until sunrise. She will get on just fine, and the priest can assist you in condition but I must tell you how important it is that you keep her behind that door. She can’t control herself and it’s not her fault. All I was is for her to be better whether I’m still among the living  or not.
@@ -1202,8 +1735,169 @@ If my life may come to an unceremonious and untimely end I pray you will take du
 Thomas L. Highgarden"
 
 [node name="Note2" parent="Props" instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.986268, 0, -0.165151, 0, 1, 0, 0.165151, 0, 0.986268, -3.12214, 1.81274, -21.9572)
+transform = Transform3D(0.986268, 0, -0.165151, 0, 1, 0, 0.165151, 0, 0.986268, -1.8229, -4.93657, -17.1141)
 note = "I hate this… I can't take this anymore. I hate it. I being accused of a murder I had no control over! The priest says it’s a demon yet refuses to hold an exorcism; he's afraid of me! And I haven’t done anything to warant it. The treat me like a rabid dog! Fuck them! They all look down at me over something I never chose! "
+
+[node name="TabelCloth" type="Sprite3D" parent="Props"]
+transform = Transform3D(0.309224, 0, 0, 0, -2.90829e-08, -1, 0, 0.66534, -4.37114e-08, 7.38827, 1.78689, -31.0062)
+shaded = true
+texture = ExtResource("28_sbcct")
+
+[node name="Chandelier" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45608, 3.73984, -30.9647)
+billboard = 2
+texture = ExtResource("29_kmrse")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Chandelier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016469, -0.210952, -0.00112915)
+light_color = Color(0.745882, 0.472508, 0, 1)
+
+[node name="Chandelier3" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13821, 3.73984, -1.64862)
+billboard = 2
+texture = ExtResource("29_kmrse")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Chandelier3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016469, -0.210952, -0.00112915)
+light_color = Color(0.745882, 0.472508, 0, 1)
+light_energy = 1.666
+light_size = 1.0
+
+[node name="Chandelier2" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45608, 3.73984, -14.2628)
+billboard = 2
+texture = ExtResource("29_kmrse")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Props/Chandelier2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.016469, -0.210952, -0.00112915)
+light_color = Color(0.745882, 0.472508, 0, 1)
+
+[node name="Chair" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.95021, 1.66534, -34.7938)
+
+[node name="Chair3" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(0.363662, 0, 0.166582, 0, 0.4, 0, -0.166582, 0, 0.363662, 5.86424, 1.66534, -31.0216)
+
+[node name="Chair4" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(0.399777, 0, -0.0133597, 0, 0.4, 0, 0.0133597, 0, 0.399777, 5.10831, 1.6615, -27.2987)
+
+[node name="Chair5" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(0.064924, 0, 0.394696, 0, 0.4, 0, -0.394696, 0, 0.064924, 6.99904, 1.6615, -25.6738)
+
+[node name="Chair6" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(-0.161565, 0, -0.365919, 0, 0.4, 0, 0.365919, 0, -0.161565, 7.82946, 1.6615, -35.9542)
+
+[node name="Chair7" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(-0.363953, 0, 0.165947, 0, 0.4, 0, -0.165947, 0, -0.363953, 9.16214, 1.6615, -34.8743)
+
+[node name="Chair8" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(-0.399164, 0, -0.0258407, 0, 0.4, 0, 0.0258407, 0, -0.399164, 8.67259, 1.6615, -31.0939)
+
+[node name="Chair9" parent="Props" instance=ExtResource("30_wejwc")]
+transform = Transform3D(-0.387761, 1.30543e-05, 0.0981913, 0.000123502, 0.4, 0.000434545, -0.0981912, 0.000451566, -0.38776, 8.9111, 1.6615, -27.1327)
+
+[node name="Sprite3D2" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1872, 6.07772, -34.7116)
+billboard = 2
+shaded = true
+texture = ExtResource("31_342m2")
+
+[node name="Table14" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(0.443, 0, 3.28952e-14, 0, 0.92, 0, -2.25581e-14, 0, 0.646, 11.7131, 4.55788, -35.4624)
+
+[node name="Sprite3D4" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0611, 2.23558, -32.1027)
+billboard = 2
+shaded = true
+texture = ExtResource("31_342m2")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1872, 6.07772, -27.2547)
+billboard = 2
+shaded = true
+texture = ExtResource("31_342m2")
+
+[node name="Sprite3D5" type="Sprite3D" parent="Props"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.66655, 2.56005, -11.8289)
+shaded = true
+texture = ExtResource("32_147ev")
+
+[node name="Sprite3D6" type="Sprite3D" parent="Props"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.66653, 2.55582, -16.2771)
+flip_h = true
+shaded = true
+texture = ExtResource("32_147ev")
+
+[node name="ComfyCouch" parent="Props" instance=ExtResource("38_66jh7")]
+transform = Transform3D(-0.0114749, 0, 0.534877, 0, 0.395, 0, -0.534877, 0, -0.0114749, -4.11834, 0.627398, 0.619516)
+
+[node name="ComfyChair" parent="Props" instance=ExtResource("39_yhn6p")]
+transform = Transform3D(-0.303599, 0, 0.268054, 0, 0.405, 0, -0.268054, 0, -0.303599, -2.29098, 0.506103, -0.557993)
+
+[node name="ComfyChair3" parent="Props" instance=ExtResource("39_yhn6p")]
+transform = Transform3D(0.223876, 0, -0.337497, 0, 0.405, 0, 0.337497, 0, 0.223876, 7.34451, 4.54731, -11.7998)
+
+[node name="ComfyChair2" parent="Props" instance=ExtResource("39_yhn6p")]
+transform = Transform3D(0.343574, -0.000947074, -0.214431, 0.000322134, 0.404998, -0.00127261, 0.214433, 0.000909045, 0.343573, -7.9123, 0.506103, -2.4345)
+
+[node name="Sprite3D7" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.87617, 0.521877, -36.0357)
+shaded = true
+texture = ExtResource("40_e8q6k")
+
+[node name="Boxes3" type="Sprite3D" parent="Props"]
+transform = Transform3D(0.473011, 0, 0, 0, 0.56179, 0, 0, 0, 1, -4.88169, -3.62375, -15.4713)
+modulate = Color(0.788927, 0.493539, 0, 1)
+billboard = 1
+shaded = true
+texture = ExtResource("41_g4swr")
+
+[node name="Boxes4" type="Sprite3D" parent="Props"]
+transform = Transform3D(0.473011, 0, 0, 0, 0.56179, 0, 0, 0, 1, -4.88169, -3.607, -26.4661)
+modulate = Color(0.788927, 0.493539, 0, 1)
+billboard = 1
+shaded = true
+texture = ExtResource("41_g4swr")
+
+[node name="Sprite3D8" type="Sprite3D" parent="Props"]
+transform = Transform3D(-9.17939e-09, 0, -0.21, 0, 0.21, 0, 0.21, 0, -9.17939e-09, 1.38875, 2.97734, -37.3665)
+shaded = true
+texture = ExtResource("42_cp7tk")
+
+[node name="Sprite3D9" type="Sprite3D" parent="Props"]
+transform = Transform3D(-0.21, 0, 1.83588e-08, 0, 0.21, 0, -1.83588e-08, 0, -0.21, 8.18734, 7.14618, -8.67141)
+shaded = true
+texture = ExtResource("42_cp7tk")
+
+[node name="Bucket" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83835, 3.26267, -10.9503)
+billboard = 2
+shaded = true
+texture = ExtResource("44_344mi")
+
+[node name="Bucket2" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83835, 3.26267, -11.4472)
+billboard = 2
+shaded = true
+texture = ExtResource("44_344mi")
+
+[node name="Bucket3" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83835, 3.26267, -15.3405)
+billboard = 2
+shaded = true
+texture = ExtResource("44_344mi")
+
+[node name="Bucket4" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83835, 3.26267, -16.4992)
+billboard = 2
+shaded = true
+texture = ExtResource("44_344mi")
+
+[node name="Bucket5" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83835, 3.26267, -17.0037)
+billboard = 2
+shaded = true
+texture = ExtResource("44_344mi")
 
 [node name="GUI" type="CanvasLayer" parent="."]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hw8m4dq7o35w"
-path.s3tc="res://.godot/imported/PotHook.png-81c554ba12091676707d7019ffe33875.s3tc.ctex"
+uid="uid://cxr7gf2ugqsbh"
+path.s3tc="res://.godot/imported/Bucket.png-90a21922648497e4f815898fee4ffde6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/2Dprops/PotHook.png"
-dest_files=["res://.godot/imported/PotHook.png-81c554ba12091676707d7019ffe33875.s3tc.ctex"]
+source_file="res://Assets/Textures/2Dprops/Bucket.png"
+dest_files=["res://.godot/imported/Bucket.png-90a21922648497e4f815898fee4ffde6.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hw8m4dq7o35w"
-path.s3tc="res://.godot/imported/PotHook.png-81c554ba12091676707d7019ffe33875.s3tc.ctex"
+uid="uid://b5wvqltyib8ow"
+path.s3tc="res://.godot/imported/Chandelier.png-89521e3e00613c3432ed97c6dffa9e4a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Textures/2Dprops/PotHook.png"
-dest_files=["res://.godot/imported/PotHook.png-81c554ba12091676707d7019ffe33875.s3tc.ctex"]
+source_file="res://Assets/Textures/2Dprops/Chandelier.png"
+dest_files=["res://.godot/imported/Chandelier.png-89521e3e00613c3432ed97c6dffa9e4a.s3tc.ctex"]
 
 [params]
 
