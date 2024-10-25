@@ -10,8 +10,7 @@ extends Interactable
 func _ready() -> void:
 	interacted.connect(func(_x):
 		if !canvas_layer.visible: note_sound.play()
-		canvas_layer.visible = true
-		get_tree().paused = true)
+		canvas_layer.visible = true)
 	notes_label.text = note
 	canvas_layer.visible = false
 
@@ -21,6 +20,9 @@ func _input(_event: InputEvent) -> void:
 		return
 	
 	if Input.is_action_just_pressed(&"ui_cancel"):
-		get_viewport().set_input_as_handled()
+		canvas_layer.visible = false
+		get_tree().paused = false
+	
+	if Input.is_action_just_pressed(&"Interact"):
 		canvas_layer.visible = false
 		get_tree().paused = false

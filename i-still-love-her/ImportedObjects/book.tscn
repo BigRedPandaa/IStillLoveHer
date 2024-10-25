@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://2dugpd4qs2xb"]
+
+[ext_resource type="Script" path="res://Scripts/book_1.gd" id="1_r8i6k"]
+[ext_resource type="Texture2D" uid="uid://dff0ffgtskyuf" path="res://Assets/Textures/HeldItems/Book.png" id="2_k1o48"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bxtxu"]
+
+[node name="Book" type="RigidBody3D"]
+script = ExtResource("1_r8i6k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bxtxu")
+
+[node name="Sprite3D" type="Sprite3D" parent="CollisionShape3D"]
+billboard = 1
+texture = ExtResource("2_k1o48")

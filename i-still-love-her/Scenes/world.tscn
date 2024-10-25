@@ -1,22 +1,33 @@
-[gd_scene load_steps=21 format=3 uid="uid://df12t2ns8g3t"]
+[gd_scene load_steps=33 format=3 uid="uid://df12t2ns8g3t"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_2tgoh"]
 [ext_resource type="Material" uid="uid://bqtcicoo80scm" path="res://Assets/Materials/Wall.tres" id="2_7wvqw"]
+[ext_resource type="PackedScene" uid="uid://b8vb5yl80oh1s" path="res://ImportedObjects/table.tscn" id="2_30swa"]
 [ext_resource type="Material" uid="uid://dwwvlcqxhu1gc" path="res://Assets/Materials/StoneFloor.tres" id="3_epals"]
 [ext_resource type="PackedScene" uid="uid://dqy18kkgelm8v" path="res://ImportedObjects/player.tscn" id="4_cw8sr"]
-[ext_resource type="PackedScene" uid="uid://bm4wn3ad0x10y" path="res://ImportedObjects/syringe.tscn" id="5_1i1ju"]
 [ext_resource type="PackedScene" uid="uid://nr2e8757jpna" path="res://ImportedObjects/Door.tscn" id="5_34pwe"]
 [ext_resource type="PackedScene" uid="uid://bqvpproeejs4u" path="res://Scenes/cutscene_manager.tscn" id="6_446tq"]
-[ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book_1.tscn" id="8_icvhi"]
+[ext_resource type="PackedScene" uid="uid://b16gqirq5hxue" path="res://ImportedObjects/Candle.tscn" id="7_mnoly"]
+[ext_resource type="PackedScene" uid="uid://2dugpd4qs2xb" path="res://ImportedObjects/book.tscn" id="8_icvhi"]
 [ext_resource type="PackedScene" uid="uid://djlfssecialsk" path="res://Scenes/PauseMenu.tscn" id="8_norkc"]
+[ext_resource type="PackedScene" uid="uid://po76gtlg002g" path="res://Assets/Models/Bookshelf.blend" id="9_no30s"]
+[ext_resource type="PackedScene" uid="uid://bhh7ts8bacggu" path="res://ImportedObjects/Meat.tscn" id="9_okdy8"]
 [ext_resource type="AudioStream" uid="uid://ci4rx4y2axuyh" path="res://Assets/Sounds/music'/ISLH_Ambience.mp3" id="9_tsj3l"]
-[ext_resource type="PackedScene" uid="uid://bbfjf4t2g3wo2" path="res://Scenes/notes.tscn" id="11_le4nv"]
+[ext_resource type="PackedScene" uid="uid://dvnh0jx1xboer" path="res://ImportedObjects/book2.tscn" id="10_jyrlh"]
+[ext_resource type="PackedScene" uid="uid://cqqhsh851xomy" path="res://ImportedObjects/Key.tscn" id="10_ogspy"]
+[ext_resource type="PackedScene" uid="uid://bbfjf4t2g3wo2" path="res://ImportedObjects/notes.tscn" id="11_le4nv"]
+[ext_resource type="Texture2D" uid="uid://f41xkbcnnmkw" path="res://Assets/Textures/MessyTile.png" id="11_vf5qw"]
 [ext_resource type="ArrayMesh" uid="uid://df3mtexkoggrv" path="res://Assets/Models/Furnace.obj" id="12_28pbo"]
 [ext_resource type="Texture2D" uid="uid://v4hlw4tp3008" path="res://Assets/Textures/2Dprops/Friepit.png" id="13_5atqt"]
 [ext_resource type="Texture2D" uid="uid://cbosur4whvt7h" path="res://Assets/Textures/2Dprops/Skillet.png" id="14_io47d"]
 [ext_resource type="Texture2D" uid="uid://ll2g6c7p2gdn" path="res://Assets/Textures/2Dprops/ISLH_CoatHanger.png" id="15_tqlpo"]
 [ext_resource type="ArrayMesh" uid="uid://dxurxhbbon4xf" path="res://Assets/Models/WallScone.obj" id="16_jshgn"]
 [ext_resource type="Texture2D" uid="uid://dlt8bfsva3y7u" path="res://Assets/Textures/2Dprops/Candle.png" id="17_aty35"]
+[ext_resource type="PackedScene" uid="uid://cn7rebo66kod4" path="res://ImportedObjects/window.tscn" id="18_qhq5a"]
+[ext_resource type="PackedScene" uid="uid://qjktldr3nig8" path="res://ImportedObjects/box.tscn" id="19_7o7h2"]
+[ext_resource type="PackedScene" uid="uid://bjlypnomtiser" path="res://Assets/Models/Shelf.blend" id="22_m1t42"]
+[ext_resource type="PackedScene" uid="uid://bu4x0uryvyf2i" path="res://ImportedObjects/stairs.tscn" id="24_c34la"]
+[ext_resource type="PackedScene" uid="uid://c5til5dwfesyr" path="res://ImportedObjects/exitDoor.tscn" id="26_6hgfj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0ly1j"]
 sky_top_color = Color(0.163791, 0.103618, 0.111319, 1)
@@ -33,6 +44,7 @@ sky_material = SubResource("ProceduralSkyMaterial_0ly1j")
 [sub_resource type="Environment" id="Environment_gymtj"]
 background_mode = 2
 sky = SubResource("Sky_u6nfc")
+ambient_light_source = 3
 tonemap_mode = 2
 glow_enabled = true
 fog_enabled = true
@@ -61,6 +73,9 @@ adjustment_brightness = 0.66
 adjustment_contrast = 1.08
 adjustment_saturation = 0.45
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rogk"]
+albedo_texture = ExtResource("11_vf5qw")
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_2tgoh")
 
@@ -72,14 +87,9 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_gymtj")
 
-[node name="UselessMass" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.26747, 0.677854, 0.5692)
-use_collision = true
-size = Vector3(4.01953, 0.787598, 1)
-
 [node name="Player" parent="." instance=ExtResource("4_cw8sr")]
 unique_name_in_owner = true
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.27161, 0.488518, -3.21524)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -1.27161, -0.187405, -3.21524)
 
 [node name="Ambeince" type="AudioStreamPlayer3D" parent="Player"]
 process_mode = 3
@@ -90,14 +100,42 @@ unit_size = 100.0
 pitch_scale = 0.85
 autoplay = true
 
-[node name="syringe" parent="." instance=ExtResource("5_1i1ju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -6)
-prompt_message = "Pick Up Syringe"
+[node name="MaddieTimer" type="Timer" parent="."]
+autostart = true
 
-[node name="Door" parent="." instance=ExtResource("5_34pwe")]
+[node name="Items" type="Node" parent="."]
+
+[node name="Note" parent="Items" instance=ExtResource("11_le4nv")]
+transform = Transform3D(0.776992, 0, 0.629511, 0, 1, 0, -0.629511, 0, 0.776992, -3.83491, 1.22275, 0.659075)
+note = "Dearest Tom,
+
+I appreciate all the letters I have been receiving from you, but please know that you have stepped one foot into your grave. You may say that the church will help but I assure you I can not be saved. I love you and I fear what I am, I do not want to hurt anyone else but I know I will. Please protect yourself and stay away from me, you do not deserve my burdens.
+
+Your Love,
+Madeline K. Highgarden"
+
+[node name="Note2" parent="Items" instance=ExtResource("11_le4nv")]
+transform = Transform3D(0.992862, 0, -0.11927, 0, 1, 0, 0.11927, 0, 0.992862, -5.26781, 1.22275, 0.398803)
+note = "Dear Madeline
+
+You are under strict rule of the church to remain in doors at all cost during night. The church has decided that you will forfeit your freedom each night for the protection of others until a time may come when God cast your demons aside.
+
+God be with you,
+Father Lucian"
+
+[node name="Note3" parent="Items" instance=ExtResource("11_le4nv")]
+transform = Transform3D(0.602985, 0, -0.797752, 0, 1, 0, 0.797752, 0, 0.602985, -8.55062, 0.544095, 0.398803)
+note = "Dear Thomas
+
+I hope that your sweet Madeline is feeling better. Me and your father had heard she’d been attacked by some mangy street mutt and wanted to send well wishes, we’re truly worried about her. I’ve heard whispers she’s come down with some sort of plague but I assume it’s all hogwash, in the end everything will find it’s place I’m sure of this. Keep your chin high and your spirits higher. And if things get worse remember that the church is alway there to help good people in need.
+
+Yours Dearly
+Mother"
+
+[node name="Door" parent="Items" instance=ExtResource("5_34pwe")]
 transform = Transform3D(0.999432, 0, 0.0337134, 0, 0.867407, 0, -0.0337134, 0, 0.999432, 2.22281, 1.54782, -3.34751)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Door"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Items/Door"]
 transform = Transform3D(1, 0, -3.72529e-09, 0, 1.15286, 0, 3.72529e-09, 0, 1, -0.865343, 0.01364, -0.00629663)
 light_color = Color(0.423529, 0, 0, 1)
 light_energy = 3.548
@@ -105,36 +143,27 @@ light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_specular = 0.0
 
-[node name="GUI" type="CanvasLayer" parent="."]
-
-[node name="timer_lbl" type="Label" parent="GUI"]
-unique_name_in_owner = true
+[node name="Book" parent="Items" instance=ExtResource("8_icvhi")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.09239, 6.3964, -9.64819)
 visible = false
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -23.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Time Left: {T}s"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="PauseMenu" parent="GUI" instance=ExtResource("8_norkc")]
+[node name="SyringeSpawnPos" type="Marker3D" parent="Items"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.42286, 1.63714, 0.502896)
 
-[node name="CutsceneManager" parent="." instance=ExtResource("6_446tq")]
-unique_name_in_owner = true
+[node name="Candle" parent="Items" instance=ExtResource("7_mnoly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2253, 2.52885, -12.9848)
 
-[node name="MaddieTimer" type="Timer" parent="."]
-autostart = true
+[node name="Book2" parent="Items" instance=ExtResource("10_jyrlh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.8091, 4.9069, -18.6328)
+visible = false
 
-[node name="Book1" parent="." instance=ExtResource("8_icvhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421384, 1.44738, -6.64461)
+[node name="Meat" parent="Items" instance=ExtResource("9_okdy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6235, 2.86128, -14.4374)
+visible = false
 
-[node name="Note" parent="." instance=ExtResource("11_le4nv")]
-transform = Transform3D(0.954735, 0, -0.297458, 0, 1, 0, 0.297458, 0, 0.954735, -5.39567, 1.09033, 0.659075)
-note = "[wave]Hello World!!![/wave]"
+[node name="Key" parent="Items" instance=ExtResource("10_ogspy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.941802, -4.21616, -28.4196)
+visible = false
 
 [node name="Walls" type="Node" parent="."]
 
@@ -151,9 +180,9 @@ size = Vector3(16, 0.001, 4)
 material = ExtResource("2_7wvqw")
 
 [node name="Wall4" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -1.10743, 2.03159, -8.15039)
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -0.961925, 2.03169, -8.14951)
 use_collision = true
-size = Vector3(7, 1, 4)
+size = Vector3(6.70898, 1, 4)
 material = ExtResource("2_7wvqw")
 
 [node name="Wall6" type="CSGBox3D" parent="Walls"]
@@ -325,9 +354,9 @@ size = Vector3(14, 1, 4)
 material = ExtResource("2_7wvqw")
 
 [node name="Wall5" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -10.1074, 2.03159, -8.15039)
+transform = Transform3D(-0.999981, 0.0060652, 0.000701164, -0.000700815, 5.98129e-05, -1, -0.00606525, -0.999982, -5.55646e-05, -10.2029, 2.03152, -8.15097)
 use_collision = true
-size = Vector3(7, 1, 4)
+size = Vector3(6.80908, 1, 4)
 material = ExtResource("2_7wvqw")
 
 [node name="Wall32" type="CSGBox3D" parent="Walls"]
@@ -350,6 +379,12 @@ use_collision = true
 size = Vector3(10.9092, 1, 36)
 material = ExtResource("3_epals")
 
+[node name="StoneFloor11" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86266, -5.46091, -20.2154)
+use_collision = true
+size = Vector3(10.9092, 1, 20.0444)
+material = ExtResource("3_epals")
+
 [node name="StoneFloor6" type="CSGBox3D" parent="Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93542, 0.00610255, -3.53774)
 use_collision = true
@@ -369,9 +404,15 @@ size = Vector3(5, 1, 4)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor2" type="CSGBox3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -25.5378)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -13.8209)
 use_collision = true
-size = Vector3(11, 0.001, 36)
+size = Vector3(11, 0.001, 12.5662)
+material = SubResource("StandardMaterial3D_7rogk")
+
+[node name="StoneFloor10" type="CSGBox3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.97376, 0.488017, -31.8349)
+use_collision = true
+size = Vector3(11, 0.001, 23.4058)
 material = ExtResource("3_epals")
 
 [node name="StoneFloor3" type="CSGBox3D" parent="Floor"]
@@ -448,7 +489,24 @@ light_color = Color(0.716556, 0.0930008, 0, 1)
 light_energy = 0.848
 omni_range = 18.426
 
+[node name="SpotLight3D4" type="SpotLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 0.0257233, 0.999669, 0, -0.999669, 0.0257233, -1.29953, -0.426797, -28.192)
+light_color = Color(1, 0.666667, 0.364706, 1)
+light_energy = 6.408
+
 [node name="Props" type="Node" parent="."]
+
+[node name="Table2" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -10.739, 0.506103, -12.8406)
+
+[node name="Table5" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, -3.26122, 0.506103, -21.3432)
+
+[node name="Table3" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-3.04969e-08, 0, 0.646402, 0, 1, 0, -0.697687, 0, -2.82551e-08, 7.43099, 4.32005, -9.4511)
+
+[node name="Table4" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(-0.697687, 0, -5.65103e-08, 0, 1, 0, 6.09937e-08, 0, -0.646402, 11.6896, 0.506103, -13.4226)
 
 [node name="Furnace" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.72589, 0.736066, -9.40713)
@@ -805,4 +863,88 @@ light_energy = 0.563
 light_indirect_energy = 0.0
 light_specular = 0.0
 
-[connection signal="interacted" from="Door" to="." method="_on_door_interacted"]
+[node name="Box" parent="Props" instance=ExtResource("19_7o7h2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.35831, 1.07165, 0.587435)
+
+[node name="Window" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(-0.0835387, 0, -0.996505, 0, 1, 0, 0.996505, 0, -0.0835387, -5.30566, 1.54471, 1.1719)
+
+[node name="Window2" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5911, 1.54471, -39.408)
+
+[node name="Window3" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5329, 1.54471, -32.9779)
+
+[node name="Window4" parent="Props" instance=ExtResource("18_qhq5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5329, 1.54471, -25.9459)
+
+[node name="Table" parent="Props" instance=ExtResource("2_30swa")]
+transform = Transform3D(1.33116, 0, 0, 0, 0.473081, 0, 0, 0, 0.271555, -5.7792, 0.506103, 0.353795)
+
+[node name="Shelf" parent="Props" instance=ExtResource("22_m1t42")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.48538, 2.49901, -11.2399)
+
+[node name="Shelf2" parent="Props" instance=ExtResource("22_m1t42")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.48538, 2.49901, -15.6072)
+
+[node name="Bookshelf" parent="Props" instance=ExtResource("9_no30s")]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 3.66573, 4.82346, -19.1677)
+
+[node name="Stairs" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.942261, 2.67732, -41.1449)
+
+[node name="Stairs2" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.609607, 1.86331, -41.1449)
+
+[node name="Stairs3" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01933, 1.12036, -41.1449)
+
+[node name="Stairs4" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55968, 0.316058, -41.1449)
+
+[node name="Stairs5" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.148736, -1.37214, -12.349)
+
+[node name="Stairs6" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.139933, -2.18615, -13.9008)
+
+[node name="Stairs7" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.131937, -2.9291, -15.3105)
+
+[node name="Stairs8" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.1232, -3.7334, -16.8509)
+
+[node name="Stairs9" parent="Props" instance=ExtResource("24_c34la")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.1232, -4.74612, -18.7865)
+
+[node name="Sprite3D" type="Sprite3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33778, -0.768655, -28.1229)
+
+[node name="Door" parent="Props" instance=ExtResource("26_6hgfj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.76798, 0.488517, -42.3555)
+
+[node name="Note" parent="Props" instance=ExtResource("11_le4nv")]
+transform = Transform3D(0.724942, 0, 0.68881, 0, 1, 0, -0.68881, 0, 0.724942, -1.74184, 1.81274, -21.9572)
+note = "To Whom It May Concern,
+
+If my life may come to an unceremonious and untimely end I pray you will take duty over protecting my Madeline. Each day she needs a good book, and her favourite tea is Earl Grey. You needn’t feed her all too much as she chooses to drink a feast worth of food each day anyway. But most importantly, each night take the key from the basement and lock her away until sunrise. She will get on just fine, and the priest can assist you in condition but I must tell you how important it is that you keep her behind that door. She can’t control herself and it’s not her fault. All I was is for her to be better whether I’m still among the living  or not.
+
+Thomas L. Highgarden"
+
+[node name="Note2" parent="Props" instance=ExtResource("11_le4nv")]
+transform = Transform3D(0.986268, 0, -0.165151, 0, 1, 0, 0.165151, 0, 0.986268, -3.12214, 1.81274, -21.9572)
+note = "I hate this… I can't take this anymore. I hate it. I being accused of a murder I had no control over! The priest says it’s a demon yet refuses to hold an exorcism; he's afraid of me! And I haven’t done anything to warant it. The treat me like a rabid dog! Fuck them! They all look down at me over something I never chose! "
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource("8_norkc")]
+
+[node name="CutsceneManager" parent="." groups=["CutsceneManager"] instance=ExtResource("6_446tq")]
+unique_name_in_owner = true
+
+[connection signal="item_recieved" from="Items/Door" to="." method="_on_door_item_recieved"]
+[connection signal="interacted" from="Items/Book" to="." method="_on_book_interacted"]
+[connection signal="interacted" from="Items/Candle" to="." method="_on_candle_interacted"]
+[connection signal="interacted" from="Items/Book2" to="." method="_on_book_2_interacted"]
+[connection signal="interacted" from="Items/Meat" to="." method="_on_meat_interacted"]
+[connection signal="finished" from="CutsceneManager" to="." method="_on_cutscene_manager_finished"]

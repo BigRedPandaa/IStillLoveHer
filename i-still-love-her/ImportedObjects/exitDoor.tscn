@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5til5dwfesyr"]
+
+[ext_resource type="PackedScene" uid="uid://dupl32osjf16" path="res://Assets/Models/Door.gltf" id="1_no7je"]
+[ext_resource type="Material" uid="uid://djr6nq7yhmrmj" path="res://Assets/Materials/Wood.tres" id="2_f1j6x"]
+[ext_resource type="Material" uid="uid://c4drciiaux4cc" path="res://Assets/Materials/RustMetal.tres" id="3_4wpgm"]
+[ext_resource type="Script" path="res://Scripts/door_intersec.gd" id="4_57mtj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3pg2x"]
+size = Vector3(0.204163, 3.01776, 1.81287)
+
+[node name="Door" instance=ExtResource("1_no7je")]
+
+[node name="Door" parent="Node" index="0"]
+surface_material_override/0 = ExtResource("2_f1j6x")
+
+[node name="Hinge" parent="Node" index="1"]
+surface_material_override/0 = ExtResource("3_4wpgm")
+
+[node name="Hinge2" parent="Node" index="2"]
+surface_material_override/0 = ExtResource("3_4wpgm")
+
+[node name="PeepHole" parent="Node" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14091, 1.4375, 0)
+surface_material_override/0 = ExtResource("3_4wpgm")
+
+[node name="Lock" parent="Node" index="4"]
+surface_material_override/0 = ExtResource("3_4wpgm")
+
+[node name="door_intersec" type="StaticBody3D" parent="." index="1"]
+script = ExtResource("4_57mtj")
+prompt_message = "Leave"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door_intersec" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00211701, 1.43943, 0.0148315)
+shape = SubResource("BoxShape3D_3pg2x")

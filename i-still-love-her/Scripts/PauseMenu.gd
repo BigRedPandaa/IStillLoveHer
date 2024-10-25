@@ -7,8 +7,8 @@ func _ready() -> void:
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed(&"ui_cancel"):
-		get_tree().paused = !get_tree().paused
 		visible = !visible
+		get_tree().paused = visible
 		if visible:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:

@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://djr6nq7yhmrmj"]
+
+[ext_resource type="Texture2D" uid="uid://cee1ut64dlqu6" path="res://Assets/Textures/Wood/Wooden_pattern__basecolor.png" id="1_efejt"]
+[ext_resource type="Texture2D" uid="uid://3q7n5f64br6c" path="res://Assets/Textures/Wood/Wooden_pattern__ambientOcclusion.png" id="2_e7v6v"]
+[ext_resource type="Texture2D" uid="uid://h6emjmqt61wi" path="res://Assets/Textures/Wood/Wooden_pattern__height.png" id="3_qt0r4"]
+[ext_resource type="Texture2D" uid="uid://c7pic5u01pemt" path="res://Assets/Textures/Wood/Wooden_pattern__metallic.png" id="4_trbpy"]
+[ext_resource type="Texture2D" uid="uid://bu0asxtdrkfq0" path="res://Assets/Textures/Wood/Wooden_pattern__normal.png" id="5_1ti50"]
+[ext_resource type="Texture2D" uid="uid://gcou8cjo3ont" path="res://Assets/Textures/Wood/Wooden_pattern__roughness.png" id="6_7exia"]
+
+[resource]
+albedo_texture = ExtResource("1_efejt")
+metallic = 1.0
+metallic_texture = ExtResource("4_trbpy")
+roughness_texture = ExtResource("6_7exia")
+normal_enabled = true
+normal_texture = ExtResource("5_1ti50")
+ao_enabled = true
+ao_texture = ExtResource("2_e7v6v")
+heightmap_texture = ExtResource("3_qt0r4")
+uv1_triplanar = true

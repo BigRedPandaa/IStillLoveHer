@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu4x0uryvyf2i"]
+
+[ext_resource type="PackedScene" uid="uid://7pausp5ye73k" path="res://Assets/Models/Stairs.gltf" id="1_62ty7"]
+[ext_resource type="Material" uid="uid://dwwvlcqxhu1gc" path="res://Assets/Materials/StoneFloor.tres" id="2_g8ugl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x4j0g"]
+size = Vector3(0.586426, 4.05093, 2.99829)
+
+[node name="Stairs" instance=ExtResource("1_62ty7")]
+
+[node name="Stairs" parent="Node" index="0"]
+surface_material_override/0 = ExtResource("2_g8ugl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(0.464904, 0.885361, 0, -0.885361, 0.464904, 0, 0, 0, 1, -0.857016, 0.463477, -0.00231934)
+shape = SubResource("BoxShape3D_x4j0g")

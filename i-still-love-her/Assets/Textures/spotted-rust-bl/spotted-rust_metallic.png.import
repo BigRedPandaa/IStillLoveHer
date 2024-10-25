@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://oicfil2j8c1n"
+path.s3tc="res://.godot/imported/spotted-rust_metallic.png-785353cf5d566505320748027b6bbbb9.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Assets/Textures/spotted-rust-bl/spotted-rust_metallic.png"
+dest_files=["res://.godot/imported/spotted-rust_metallic.png-785353cf5d566505320748027b6bbbb9.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

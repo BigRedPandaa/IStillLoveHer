@@ -1,0 +1,26 @@
+[gd_scene load_steps=9 format=3 uid="uid://qjktldr3nig8"]
+
+[ext_resource type="PackedScene" uid="uid://byux37fet23y" path="res://Assets/Models/Box.gltf" id="1_8ne2s"]
+[ext_resource type="Texture2D" uid="uid://b7hlvnutqqvcn" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_albedo.png" id="2_1lpbd"]
+[ext_resource type="Texture2D" uid="uid://4dk35lnhaxx6" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_ao.png" id="3_ohg5d"]
+[ext_resource type="Texture2D" uid="uid://bl7qc2hu2mi5b" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_height.png" id="4_ng3fj"]
+[ext_resource type="Texture2D" uid="uid://dpn57lnnplwg7" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_metallic.png" id="5_da7g2"]
+[ext_resource type="Texture2D" uid="uid://cy8wfbadadg8" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_normal-ogl.png" id="6_maiy1"]
+[ext_resource type="Texture2D" uid="uid://c82tv8trpunlg" path="res://Assets/Textures/corrugated-cardboard-bl/corrugated-cardboard_roughness.png" id="7_k4xk4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rd1kn"]
+albedo_texture = ExtResource("2_1lpbd")
+metallic = 1.0
+metallic_texture = ExtResource("5_da7g2")
+roughness_texture = ExtResource("7_k4xk4")
+normal_enabled = true
+normal_texture = ExtResource("6_maiy1")
+ao_enabled = true
+ao_texture = ExtResource("3_ohg5d")
+heightmap_enabled = true
+heightmap_texture = ExtResource("4_ng3fj")
+
+[node name="Box" instance=ExtResource("1_8ne2s")]
+
+[node name="Box" parent="Node" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rd1kn")

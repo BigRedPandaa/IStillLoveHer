@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8vb5yl80oh1s"]
+
+[ext_resource type="PackedScene" uid="uid://d4awq5dx5ei3b" path="res://Assets/Models/Table.blend" id="1_pl5g1"]
+[ext_resource type="Material" uid="uid://c7qg7q7dwgw2i" path="res://Assets/Materials/OakWood.tres" id="2_7w8fc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ht3g"]
+size = Vector3(2.73328, 1.57422, 4.38892)
+
+[node name="Table" instance=ExtResource("1_pl5g1")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_7w8fc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.362244, 0.519531, 1.20837)
+shape = SubResource("BoxShape3D_7ht3g")

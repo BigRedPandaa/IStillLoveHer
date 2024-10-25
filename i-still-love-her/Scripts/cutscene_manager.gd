@@ -14,9 +14,9 @@ func _ready() -> void:
 		visible = false)
 
 
-func play_cutscene(cutscene: String) -> void:
+func play_cutscene(cutscene: VideoStreamTheora) -> void:
 	visible = true
-	var stream: VideoStreamTheora = load(cutscene)
+	var stream: VideoStreamTheora = cutscene
 	video_stream_player.stream = stream
 	video_stream_player.play()
 	get_tree().paused = true
